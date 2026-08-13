@@ -1,0 +1,1640 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TOEIC Part 5 2026 | Test 01 & Test 02 (100 Câu) - by Dirius</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; background-color: #f8fafc; }
+        .option-card { transition: all 0.2s ease-in-out; }
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        const { useState } = React;
+
+        const testsDatabase = {
+            "t1": {
+                title: "100 CÂU HỎI PART 5 THEO XU HƯỚNG MỚI (TEST 01)",
+                quizData: [
+                    {
+                        id: 1,
+                        question: "Question 1. The information in the warehouse inventory system now aligns _____ with our actual stock levels.",
+                        questionVietnamese: "Thông tin trong hệ thống kiểm kê kho hàng hiện đã khớp một cách chính xác với mức tồn kho thực tế của chúng tôi.",
+                        options: [
+                            { text: "A. correct", isCorrect: false, rationale: "Tính từ." },
+                            { text: "B. correctly", isCorrect: true, rationale: "Trạng từ 'correctly' bổ nghĩa cho động từ 'aligns' (khớp một cách chính xác)." },
+                            { text: "C. correction", isCorrect: false, rationale: "Danh từ." },
+                            { text: "D. corrections", isCorrect: false, rationale: "Danh từ số nhiều." }
+                        ],
+                        evidence: "aligns correctly with our actual stock levels",
+                        evidenceTranslation: "khớp một cách chính xác với mức tồn kho thực tế"
+                    },
+                    {
+                        id: 2,
+                        question: "Question 2. Aspiring presenters must provide an abstract _____ a biographical statement when applying.",
+                        questionVietnamese: "Các diễn giả đầy triển vọng phải cung cấp bản tóm tắt cùng với bản tiểu sử bản thân khi nộp đơn.",
+                        options: [
+                            { text: "A. in addition", isCorrect: false, rationale: "Thiếu 'to'." },
+                            { text: "B. along with", isCorrect: true, rationale: "Cụm giới từ 'along with + N' (cùng với/kèm theo)." },
+                            { text: "C. likewise", isCorrect: false, rationale: "Trạng từ (Tương tự)." },
+                            { text: "D. together", isCorrect: false, rationale: "Thiếu 'with'." }
+                        ],
+                        evidence: "provide an abstract along with a biographical statement",
+                        evidenceTranslation: "cung cấp bản tóm tắt cùng với tiểu sử cá nhân"
+                    },
+                    {
+                        id: 3,
+                        question: "Question 3. Ms. Delgado noted that the updated software _____ sufficient security features for enterprise use.",
+                        questionVietnamese: "Cô Delgado lưu ý rằng phần mềm đã cập nhật thiếu các tính năng bảo mật đủ cho nhu cầu sử dụng của doanh nghiệp.",
+                        options: [
+                            { text: "A. limits", isCorrect: false, rationale: "Giới hạn." },
+                            { text: "B. overlooks", isCorrect: false, rationale: "Bỏ qua/Bỏ sót." },
+                            { text: "C. lacks", isCorrect: true, rationale: "Động từ 'lacks' (thiếu/không có đủ cái gì)." },
+                            { text: "D. prevents", isCorrect: false, rationale: "Ngăn chặn." }
+                        ],
+                        evidence: "software lacks sufficient security features",
+                        evidenceTranslation: "phần mềm thiếu các tính năng bảo mật đủ dùng"
+                    },
+                    {
+                        id: 4,
+                        question: "Question 4. This culinary workshop caters _____ to professionals looking to refine their plating techniques.",
+                        questionVietnamese: "Hội thảo ẩm thực này phục vụ đặc biệt cho các chuyên gia đang muốn trau dồi kỹ thuật trình bày món ăn.",
+                        options: [
+                            { text: "A. specify", isCorrect: false, rationale: "Động từ." },
+                            { text: "B. specific", isCorrect: false, rationale: "Tính từ." },
+                            { text: "C. specified", isCorrect: false, rationale: "Quá khứ phân từ." },
+                            { text: "D. specifically", isCorrect: true, rationale: "Trạng từ bổ nghĩa cho động từ 'caters' (phục vụ một cách đặc biệt)." }
+                        ],
+                        evidence: "caters specifically to professionals",
+                        evidenceTranslation: "phục vụ đặc biệt tới các chuyên gia"
+                    },
+                    {
+                        id: 5,
+                        question: "Question 5. Payment of the deposit will confirm your intention _____ enroll in the spring session of our IT certification course.",
+                        questionVietnamese: "Thanh toán khoản tiền cọc sẽ xác nhận ý định đăng ký vào khóa học chứng chỉ CNTT kỳ mùa xuân của bạn.",
+                        options: [
+                            { text: "A. with", isCorrect: false, rationale: "Với." },
+                            { text: "B. to", isCorrect: true, rationale: "Cấu trúc 'intention to do sth' (ý định làm việc gì)." },
+                            { text: "C. for", isCorrect: false, rationale: "Cho." },
+                            { text: "D. of", isCorrect: false, rationale: "Của (nếu dùng of thì đi với V-ing, ở đây là 'enroll')." }
+                        ],
+                        evidence: "intention to enroll in the spring session",
+                        evidenceTranslation: "ý định đăng ký học vào kỳ mùa xuân"
+                    },
+                    {
+                        id: 6,
+                        question: "Question 6. The sprinkler operates _____ to conserve water while keeping the landscape thriving.",
+                        questionVietnamese: "Vòi phun nước hoạt động ngắt quãng/định kỳ để tiết kiệm nước trong khi vẫn giữ cho cảnh quan phát triển tốt.",
+                        options: [
+                            { text: "A. continuously", isCorrect: false, rationale: "Liên tục (không giúp tiết kiệm nước)." },
+                            { text: "B. dependently", isCorrect: false, rationale: "Phụ thuộc." },
+                            { text: "C. profoundly", isCorrect: false, rationale: "Sâu sắc." },
+                            { text: "D. intermittently", isCorrect: true, rationale: "Trạng từ 'intermittently' (ngắt quãng/theo từng đợt) giúp tiết kiệm nước." }
+                        ],
+                        evidence: "operates intermittently to conserve water",
+                        evidenceTranslation: "hoạt động ngắt quãng để tiết kiệm nước"
+                    },
+                    {
+                        id: 7,
+                        question: "Question 7. Beacon Industries allows its employees to participate in the profit-sharing program _____ they have completed one year of service.",
+                        questionVietnamese: "Beacon Industries cho phép nhân viên tham gia chương trình chia sẻ lợi nhuận miễn là/với điều kiện là họ đã hoàn thành một năm làm việc.",
+                        options: [
+                            { text: "A. notwithstanding", isCorrect: false, rationale: "Mặc dù (+ N/NP)." },
+                            { text: "B. whereas", isCorrect: false, rationale: "Trong khi (trái ngược)." },
+                            { text: "C. so that", isCorrect: false, rationale: "Để mà (chỉ mục đích)." },
+                            { text: "D. provided", isCorrect: true, rationale: "Liên từ 'provided (that)' = as long as (với điều kiện là / miễn là)." }
+                        ],
+                        evidence: "participate... provided they have completed one year",
+                        evidenceTranslation: "tham gia... với điều kiện họ đã hoàn thành 1 năm"
+                    },
+                    {
+                        id: 8,
+                        question: "Question 8. Corefuel has developed a nutrition _____ tailored to athletes seeking efficient muscle recovery.",
+                        questionVietnamese: "Corefuel đã phát triển một sản phẩm bổ sung dinh dưỡng được thiết kế riêng cho các vận động viên đang tìm kiếm sự phục hồi cơ bắp hiệu quả.",
+                        options: [
+                            { text: "A. supplement", isCorrect: true, rationale: "Danh từ ghép 'nutrition supplement' (sản phẩm/chất bổ sung dinh dưỡng)." },
+                            { text: "B. supplemental", isCorrect: false, rationale: "Tính từ." },
+                            { text: "C. supplementary", isCorrect: false, rationale: "Tính từ bổ sung." },
+                            { text: "D. supplemented", isCorrect: false, rationale: "V-ed." }
+                        ],
+                        evidence: "developed a nutrition supplement tailored to...",
+                        evidenceTranslation: "phát triển một sản phẩm bổ sung dinh dưỡng được thiết kế riêng cho..."
+                    },
+                    {
+                        id: 9,
+                        question: "Question 9. Meridian's new software lets business accountants _____ manage the finances of multiple branch locations.",
+                        questionVietnamese: "Phần mềm mới của Meridian cho phép kế toán viên doanh nghiệp quản lý tài chính của nhiều chi nhánh một cách mượt mà/liền mạch.",
+                        options: [
+                            { text: "A. greatly", isCorrect: false, rationale: "Rất nhiều." },
+                            { text: "B. ultimately", isCorrect: false, rationale: "Cuối cùng." },
+                            { text: "C. seamlessly", isCorrect: true, rationale: "Trạng từ 'seamlessly' (mượt mà, trơn tru, không bị gián đoạn)." },
+                            { text: "D. immensely", isCorrect: false, rationale: "Mênh mông/Cực kỳ." }
+                        ],
+                        evidence: "seamlessly manage the finances",
+                        evidenceTranslation: "quản lý tài chính một cách mượt mà trơn tru"
+                    },
+                    {
+                        id: 10,
+                        question: "Question 10. _____ proprietary information to colleagues via public Wi-Fi poses significant security risks.",
+                        questionVietnamese: "Việc truyền/gửi thông tin độc quyền cho đồng nghiệp qua Wi-Fi công cộng gây ra những rủi ro bảo mật đáng kể.",
+                        options: [
+                            { text: "A. Handling", isCorrect: false, rationale: "Xử lý." },
+                            { text: "B. Reviewing", isCorrect: false, rationale: "Xem xét." },
+                            { text: "C. Accessing", isCorrect: false, rationale: "Truy cập." },
+                            { text: "D. Transmitting", isCorrect: true, rationale: "Danh động từ 'Transmitting' (việc truyền/phát/gửi dữ liệu)." }
+                        ],
+                        evidence: "Transmitting proprietary information via public Wi-Fi",
+                        evidenceTranslation: "Việc truyền gửi thông tin nội bộ qua wifi công cộng"
+                    },
+                    {
+                        id: 11,
+                        question: "Question 11. Quantum Electronics launched its wristband tracker just _____ demand for wearable technology peaked.",
+                        questionVietnamese: "Quantum Electronics đã tung ra thiết bị theo dõi đeo tay ngay khi nhu cầu về công nghệ đeo được đạt đỉnh.",
+                        options: [
+                            { text: "A. as", isCorrect: true, rationale: "Liên từ 'just as' (ngay khi / đúng lúc)." },
+                            { text: "B. through", isCorrect: false, rationale: "Xuyên qua." },
+                            { text: "C. toward", isCorrect: false, rationale: "Về hướng." },
+                            { text: "D. like", isCorrect: false, rationale: "Như." }
+                        ],
+                        evidence: "launched... just as demand... peaked",
+                        evidenceTranslation: "tung ra sản phẩm đúng lúc nhu cầu đạt đỉnh"
+                    },
+                    {
+                        id: 12,
+                        question: "Question 12. Visitors to Silver Creek Park often find the hiking trail more _____ than they expected based on the map.",
+                        questionVietnamese: "Du khách đến Công viên Silver Creek thường thấy tuyến đường đi bộ đường dài quanh co hơn so với mong đợi dựa trên bản đồ.",
+                        options: [
+                            { text: "A. wind", isCorrect: false, rationale: "Động từ/Danh từ." },
+                            { text: "B. winding", isCorrect: true, rationale: "Tính từ 'winding' (quanh co, ngoằn ngoèo)." },
+                            { text: "C. windingly", isCorrect: false, rationale: "Trạng từ." },
+                            { text: "D. wound", isCorrect: false, rationale: "Quá khứ của wind." }
+                        ],
+                        evidence: "find the hiking trail more winding than expected",
+                        evidenceTranslation: "thấy tuyến đường đi bộ quanh co hơn mong đợi"
+                    },
+                    {
+                        id: 13,
+                        question: "Question 13. Relocating its headquarters to Denver _____ to be the right choice for Crossroads Shipping at first.",
+                        questionVietnamese: "Ban đầu, việc chuyển trụ sở chính đến Denver có vẻ như là lựa chọn đúng đắn đối với Crossroads Shipping.",
+                        options: [
+                            { text: "A. evolved", isCorrect: false, rationale: "Tiến hóa." },
+                            { text: "B. realized", isCorrect: false, rationale: "Nhận ra." },
+                            { text: "C. served", isCorrect: false, rationale: "Phục vụ." },
+                            { text: "D. appeared", isCorrect: true, rationale: "Cấu trúc 'appeared to be...' (có vẻ như/dường như là)." }
+                        ],
+                        evidence: "appeared to be the right choice",
+                        evidenceTranslation: "dường như/có vẻ là sự lựa chọn đúng đắn"
+                    },
+                    {
+                        id: 14,
+                        question: "Question 14. To prevent the _____ of guests who have left the amusement park, the turnstiles do not accept previously scanned barcodes.",
+                        questionVietnamese: "Để ngăn chặn việc vào lại của những khách đã rời công viên giải trí, cổng xoay không chấp nhận các mã mã vạch đã quét trước đó.",
+                        options: [
+                            { text: "A. repetition", isCorrect: false, rationale: "Sự lặp lại." },
+                            { text: "B. reuse", isCorrect: false, rationale: "Sự tái sử dụng." },
+                            { text: "C. replacement", isCorrect: false, rationale: "Sự thay thế." },
+                            { text: "D. reentry", isCorrect: true, rationale: "Danh từ 'reentry' (sự quay trở lại / vào lại)." }
+                        ],
+                        evidence: "prevent the reentry of guests who have left",
+                        evidenceTranslation: "ngăn chặn sự vào lại của những khách đã rời đi"
+                    },
+                    {
+                        id: 15,
+                        question: "Question 15. Stanton Hospital's residency program allows medical graduates to gain experience _____ the supervision of certified physicians.",
+                        questionVietnamese: "Chương trình nội trú của Bệnh viện Stanton cho phép các sinh viên y khoa tốt nghiệp tích lũy kinh nghiệm dưới sự giám sát của các bác sĩ chứng chỉ.",
+                        options: [
+                            { text: "A. beneath", isCorrect: false, rationale: "Bên dưới." },
+                            { text: "B. among", isCorrect: false, rationale: "Trong số." },
+                            { text: "C. under", isCorrect: true, rationale: "Cụm giới từ 'under the supervision of' (dưới sự giám sát của)." },
+                            { text: "D. upon", isCorrect: false, rationale: "Trở thành/Trên." }
+                        ],
+                        evidence: "under the supervision of certified physicians",
+                        evidenceTranslation: "dưới sự giám sát của các bác sĩ có chứng chỉ"
+                    },
+                    {
+                        id: 16,
+                        question: "Question 16. Photography is permitted on the observation deck as long as it does not _____ with the comfort of other visitors.",
+                        questionVietnamese: "Việc chụp ảnh được phép trên đài quan sát miễn là nó không cản trở/ảnh hưởng đến sự thoải mái của các du khách khác.",
+                        options: [
+                            { text: "A. coincide", isCorrect: false, rationale: "Trùng hợp (đi với with)." },
+                            { text: "B. contradict", isCorrect: false, rationale: "Mâu thuẫn." },
+                            { text: "C. interfere", isCorrect: true, rationale: "Cụm động từ 'interfere with' (can thiệp/cản trở/gây ảnh hưởng)." },
+                            { text: "D. disturb", isCorrect: false, rationale: "Làm phiền (Ngoại động từ, không đi với with)." }
+                        ],
+                        evidence: "does not interfere with the comfort",
+                        evidenceTranslation: "không cản trở/ảnh hưởng đến sự thoải mái"
+                    },
+                    {
+                        id: 17,
+                        question: "Question 17. Nexon Motors' new engine design has turned out to be _____ a breakthrough that competitors are rushing to develop similar models.",
+                        questionVietnamese: "Thiết kế động cơ mới của Nexon Motors đã hóa ra là một đột phá đến mức các đối thủ cạnh tranh đang vội vã phát triển các mẫu tương tự.",
+                        options: [
+                            { text: "A. such", isCorrect: true, rationale: "Cấu trúc 'such + a/an + N + that...' (đến mức mà)." },
+                            { text: "B. among", isCorrect: false, rationale: "Giữa." },
+                            { text: "C. enough", isCorrect: false, rationale: "Đủ." },
+                            { text: "D. either", isCorrect: false, rationale: "Hoặc." }
+                        ],
+                        evidence: "such a breakthrough that competitors are rushing",
+                        evidenceTranslation: "một đột phá lớn đến mức các đối thủ phải vội vã"
+                    },
+                    {
+                        id: 18,
+                        question: "Question 18. Chef Julian Kim _____ selects organic ingredients from local farms for his signature dishes at Lavender Bistro.",
+                        questionVietnamese: "Đầu bếp Julian Kim lựa chọn một cách có chủ đích các nguyên liệu hữu cơ từ các trang trại địa phương cho các món ăn đặc trưng của mình.",
+                        options: [
+                            { text: "A. widely", isCorrect: false, rationale: "Rộng rãi." },
+                            { text: "B. hastily", isCorrect: false, rationale: "Hấp vội." },
+                            { text: "C. respectively", isCorrect: false, rationale: "Tương ứng." },
+                            { text: "D. deliberately", isCorrect: true, rationale: "Trạng từ 'deliberately' (thận trọng / có chủ đích / cố ý chọn lựa kĩ)." }
+                        ],
+                        evidence: "deliberately selects organic ingredients",
+                        evidenceTranslation: "thận trọng/có chủ đích lựa chọn nguyên liệu hữu cơ"
+                    },
+                    {
+                        id: 19,
+                        question: "Question 19. The survey targeted a specific geographic market _____ which consumer preferences differ significantly from national trends.",
+                        questionVietnamese: "Khảo sát hướng tới một thị trường địa lý cụ thể, nơi mà/trong đó sở thích của người tiêu dùng khác biệt đáng kể so với xu hướng quốc gia.",
+                        options: [
+                            { text: "A. in", isCorrect: true, rationale: "Cụm 'in which' (nơi mà/trong thị trường đó)." },
+                            { text: "B. with", isCorrect: false, rationale: "Với." },
+                            { text: "C. into", isCorrect: false, rationale: "Vào trong." },
+                            { text: "D. from", isCorrect: false, rationale: "Từ." }
+                        ],
+                        evidence: "geographic market in which consumer preferences differ",
+                        evidenceTranslation: "thị trường địa lý mà trong đó sở thích người tiêu dùng khác biệt"
+                    },
+                    {
+                        id: 20,
+                        question: "Question 20. Mr. Alvarez kept a record of _____ was agreed upon by the two companies' leadership during the merger negotiations.",
+                        questionVietnamese: "Ông Alvarez đã ghi lại những gì đã được lãnh đạo hai công ty thống nhất trong các cuộc đàm phán sáp nhập.",
+                        options: [
+                            { text: "A. it", isCorrect: false, rationale: "Nó." },
+                            { text: "B. everything", isCorrect: false, rationale: "Cần mệnh đề quan hệ." },
+                            { text: "(C) that", isCorrect: false, rationale: "Rằng." },
+                            { text: "D. what", isCorrect: true, rationale: "Mệnh đề danh từ 'what was agreed upon' (những gì đã được thống nhất)." }
+                        ],
+                        evidence: "kept a record of what was agreed upon",
+                        evidenceTranslation: "lưu lại hồ sơ những gì đã được thống nhất"
+                    },
+                    {
+                        id: 21,
+                        question: "21. The head archaeologist at the Redstone site declared it _____ that all artifacts be documented before transport.",
+                        questionVietnamese: "Nhà khảo cổ học trưởng tại địa điểm Redstone đã tuyên bố rằng việc tất cả các hiện vật phải được ghi chép lại trước khi vận chuyển là bắt buộc.",
+                        options: [
+                            { text: "A. official", isCorrect: false, rationale: "Chính thức." },
+                            { text: "B. liable", isCorrect: false, rationale: "Có trách nhiệm pháp lý." },
+                            { text: "C. mandatory", isCorrect: true, rationale: "Tính từ 'mandatory' (bắt buộc)." },
+                            { text: "D. helpful", isCorrect: false, rationale: "Hữu ích." }
+                        ],
+                        evidence: "declared it mandatory that all artifacts be documented",
+                        evidenceTranslation: "tuyên bố bắt buộc rằng tất cả hiện vật phải được ghi chép lại"
+                    },
+                    {
+                        id: 22,
+                        question: "22. The hiring committee will hold interviews with _____ selected via the document screening from among the 200-person applicant pool.",
+                        questionVietnamese: "Ủy ban tuyển dụng sẽ tổ chức các cuộc phỏng vấn với những người được chọn thông qua vòng sàng lọc hồ sơ từ tập hợp 200 ứng viên.",
+                        options: [
+                            { text: "A. their", isCorrect: false, rationale: "Tính từ sở hữu." },
+                            { text: "B. those", isCorrect: true, rationale: "Đại từ 'those + Vp2' (những người được chọn)." },
+                            { text: "C. who", isCorrect: false, rationale: "Đại từ quan hệ." },
+                            { text: "D. whoever", isCorrect: false, rationale: "Bất kỳ ai." }
+                        ],
+                        evidence: "interviews with those selected via document screening",
+                        evidenceTranslation: "phỏng vấn với những người được chọn qua sàng lọc hồ sơ"
+                    },
+                    {
+                        id: 23,
+                        question: "23. The installation of solar panels has decreased Optima Manufacturing's _____ on the municipal power grid for energy.",
+                        questionVietnamese: "Việc lắp đặt các tấm pin mặt trời đã làm giảm sự phụ thuộc của Optima Manufacturing vào lưới điện thành phố.",
+                        options: [
+                            { text: "A. necessity", isCorrect: false, rationale: "Sự cần thiết." },
+                            { text: "B. demand", isCorrect: false, rationale: "Nhu cầu (thường đi với for)." },
+                            { text: "C. reliance", isCorrect: true, rationale: "Danh từ 'reliance on' (sự phụ thuộc vào)." },
+                            { text: "D. limitation", isCorrect: false, rationale: "Sự giới hạn." }
+                        ],
+                        evidence: "decreased Optima's reliance on the municipal power grid",
+                        evidenceTranslation: "làm giảm sự phụ thuộc của Optima vào lưới điện thành phố"
+                    },
+                    {
+                        id: 24,
+                        question: "24. _____ Parker & Co.'s employee retention rates continue to drop, overall productivity is expected to remain stable due to increased automation.",
+                        questionVietnamese: "Cho dù tỷ lệ giữ chân nhân viên của Parker & Co. tiếp tục giảm, năng suất tổng thể dự kiến vẫn ổn định nhờ gia tăng tự động hóa.",
+                        options: [
+                            { text: "A. In case", isCorrect: false, rationale: "Trong trường hợp." },
+                            { text: "B. Even if", isCorrect: true, rationale: "Liên từ 'Even if' (cho dù/ngay cả khi)." },
+                            { text: "C. Meanwhile", isCorrect: false, rationale: "Trong khi đó." },
+                            { text: "D. As though", isCorrect: false, rationale: "Như thể là." }
+                        ],
+                        evidence: "Even if employee retention rates continue to drop...",
+                        evidenceTranslation: "Cho dù tỷ lệ giữ chân nhân viên tiếp tục giảm..."
+                    },
+                    {
+                        id: 25,
+                        question: "25. Mr. Kang insisted on reviewing the product _____ himself before the team began building the prototype.",
+                        questionVietnamese: "Ông Kang nhấn mạnh việc tự mình xem xét các thông số kỹ thuật của sản phẩm trước khi đội ngũ bắt đầu chế tạo mẫu thử.",
+                        options: [
+                            { text: "A. specify", isCorrect: false, rationale: "Động từ." },
+                            { text: "B. specific", isCorrect: false, rationale: "Tính từ." },
+                            { text: "C. specifically", isCorrect: false, rationale: "Trạng từ." },
+                            { text: "D. specifications", isCorrect: true, rationale: "Cụm danh từ 'product specifications' (các thông số kỹ thuật sản phẩm)." }
+                        ],
+                        evidence: "reviewing the product specifications himself",
+                        evidenceTranslation: "xem xét các thông số kỹ thuật sản phẩm"
+                    },
+                    {
+                        id: 26,
+                        question: "26. Trustline Finance gives clients the opportunity to apply for loans without _____ meeting a representative in person.",
+                        questionVietnamese: "Trustline Finance mang lại cho khách hàng cơ hội đăng ký vay vốn mà không cần bao giờ gặp trực tiếp đại diện.",
+                        options: [
+                            { text: "A. ever", isCorrect: true, rationale: "Phó từ 'without ever V-ing' (mà không bao giờ/không từng phải làm gì)." },
+                            { text: "B. still", isCorrect: false, rationale: "Vẫn." },
+                            { text: "C. just", isCorrect: false, rationale: "Chỉ." },
+                            { text: "D. instead", isCorrect: false, rationale: "Thay vào đó." }
+                        ],
+                        evidence: "without ever meeting a representative in person",
+                        evidenceTranslation: "mà không từng/bao giờ gặp trực tiếp đại diện"
+                    },
+                    {
+                        id: 27,
+                        question: "27. Many logistics companies have expanded their delivery capacity in response to a _____ in online orders.",
+                        questionVietnamese: "Nhiều công ty logistics đã mở rộng năng lực giao hàng để đáp ứng sự tăng vọt các đơn hàng trực tuyến.",
+                        options: [
+                            { text: "A. surplus", isCorrect: false, rationale: "Số dư." },
+                            { text: "B. volume", isCorrect: false, rationale: "Thể tích/Khối lượng." },
+                            { text: "C. surge", isCorrect: true, rationale: "Danh từ 'a surge in' (sự tăng vọt/bùng nổ)." },
+                            { text: "D. cycle", isCorrect: false, rationale: "Chu kỳ." }
+                        ],
+                        evidence: "in response to a surge in online orders",
+                        evidenceTranslation: "đáp lại sự tăng vọt các đơn hàng trực tuyến"
+                    },
+                    {
+                        id: 28,
+                        question: "28. Despite her initial enthusiasm, the operations director ultimately _____ the proposal to increase service fees by 15%.",
+                        questionVietnamese: "Mặc dù có sự hào hứng ban đầu, giám đốc vận hành cuối cùng đã bác bỏ đề xuất tăng 15% phí dịch vụ.",
+                        options: [
+                            { text: "A. forwarded", isCorrect: false, rationale: "Chuyển tiếp." },
+                            { text: "B. rejected", isCorrect: true, rationale: "Động từ 'rejected' (bác bỏ/từ chối)." },
+                            { text: "C. extended", isCorrect: false, rationale: "Mở rộng." },
+                            { text: "D. concluded", isCorrect: false, rationale: "Kết luận." }
+                        ],
+                        evidence: "Despite initial enthusiasm... ultimately rejected the proposal",
+                        evidenceTranslation: "Mặc dù hào hứng ban đầu... cuối cùng đã bác bỏ đề xuất"
+                    },
+                    {
+                        id: 29,
+                        question: "29. One focus of Northstar Media's branding workshop is how to strengthen market _____ through consistent messaging across all channels.",
+                        questionVietnamese: "Trọng tâm của hội thảo thương hiệu của Northstar Media là cách tăng cường sự nhận diện thị trường thông qua thông điệp nhất quán trên mọi kênh.",
+                        options: [
+                            { text: "A. recognize", isCorrect: false, rationale: "Động từ." },
+                            { text: "B. recognized", isCorrect: false, rationale: "V-ed." },
+                            { text: "C. recognition", isCorrect: true, rationale: "Cụm danh từ 'market recognition' (sự nhận diện thương hiệu/thị trường)." },
+                            { text: "D. recognizing", isCorrect: false, rationale: "V-ing." }
+                        ],
+                        evidence: "strengthen market recognition through consistent messaging",
+                        evidenceTranslation: "tăng cường nhận diện thị trường qua thông điệp nhất quán"
+                    },
+                    {
+                        id: 30,
+                        question: "30. The protective coating is specifically formulated for surfaces that have proven _____ to temperature fluctuations.",
+                        questionVietnamese: "Lớp phủ bảo vệ được chế tạo đặc biệt cho các bề mặt đã chứng tỏ là nhạy cảm với biến động nhiệt độ.",
+                        options: [
+                            { text: "A. sense", isCorrect: false, rationale: "Danh từ." },
+                            { text: "B. sensitive", isCorrect: true, rationale: "Tính từ 'proven sensitive to' (chứng tỏ nhạy cảm với)." },
+                            { text: "C. sensing", isCorrect: false, rationale: "V-ing." },
+                            { text: "D. sensitively", isCorrect: false, rationale: "Trạng từ." }
+                        ],
+                        evidence: "surfaces that have proven sensitive to temperature fluctuations",
+                        evidenceTranslation: "các bề mặt đã chứng tỏ là nhạy cảm với biến động nhiệt độ"
+                    },
+                    {
+                        id: 31,
+                        question: "31. _____ remains in the budget at the end of the fiscal year will be allocated toward next year's priority objectives.",
+                        questionVietnamese: "Bất kỳ khoản ngân sách nào còn lại vào cuối năm tài chính sẽ được phân bổ cho các mục tiêu ưu tiên của năm tới.",
+                        options: [
+                            { text: "A. Whatever", isCorrect: false, rationale: "Bất kỳ cái gì (cần danh từ đứng sau nếu làm từ hạn định)." },
+                            { text: "B. It", isCorrect: false, rationale: "Đại từ." },
+                            { text: "C. There", isCorrect: false, rationale: "Ở đó." },
+                            { text: "D. Anything", isCorrect: true, rationale: "Đại từ 'Anything' (bất kỳ cái gì còn lại trong ngân sách) làm chủ ngữ." }
+                        ],
+                        evidence: "Anything remains in the budget... will be allocated",
+                        evidenceTranslation: "Bất kỳ cái gì còn lại trong ngân sách... sẽ được phân bổ"
+                    },
+                    {
+                        id: 32,
+                        question: "32. Fairmont Biotech released the results of a preliminary trial of its new device on Monday, _____ investors who had feared delays.",
+                        questionVietnamese: "Fairmont Biotech đã công bố kết quả thử nghiệm sơ bộ thiết bị mới vào Thứ Hai, làm yên lòng các nhà đầu tư vốn lo ngại về sự trễ hạn.",
+                        options: [
+                            { text: "A. reassuring", isCorrect: true, rationale: "Mệnh đề quan hệ rút gọn dạng chủ động (reassuring investors)." },
+                            { text: "B. reassured", isCorrect: false, rationale: "Dạng bị động." },
+                            { text: "C. reassures", isCorrect: false, rationale: "Động từ số ít." },
+                            { text: "D. reassurance", isCorrect: false, rationale: "Danh từ." }
+                        ],
+                        evidence: "released the results... reassuring investors who had feared delays",
+                        evidenceTranslation: "công bố kết quả... làm yên lòng các nhà đầu tư"
+                    },
+                    {
+                        id: 33,
+                        question: "33. The order-processing system recently implemented in all operating divisions makes it easy to view both completed and _____ transactions.",
+                        questionVietnamese: "Hệ thống xử lý đơn hàng gần đây được triển khai ở tất cả bộ phận cho phép dễ dàng xem cả giao dịch đã hoàn thành và giao dịch đang chờ xử lý.",
+                        options: [
+                            { text: "A. pending", isCorrect: true, rationale: "Tính từ 'pending transactions' (các giao dịch đang chờ xử lý)." },
+                            { text: "B. verified", isCorrect: false, rationale: "Đã xác minh." },
+                            { text: "C. confidential", isCorrect: false, rationale: "Bảo mật." },
+                            { text: "D. overseas", isCorrect: false, rationale: "Nước ngoài." }
+                        ],
+                        evidence: "view both completed and pending transactions",
+                        evidenceTranslation: "xem cả các giao dịch đã hoàn thành và đang chờ xử lý"
+                    },
+                    {
+                        id: 34,
+                        question: "34. The Westville City Council launched an _____ to foster partnerships between the public and private sectors.",
+                        questionVietnamese: "Hội đồng Thành phố Westville đã khởi xướng một sáng kiến nhằm thúc đẩy quan hệ đối tác giữa khu vực công và tư nhân.",
+                        options: [
+                            { text: "A. initiative", isCorrect: true, rationale: "Danh từ 'an initiative' (một sáng kiến)." },
+                            { text: "B. assignment", isCorrect: false, rationale: "Nhiệm vụ được giao." },
+                            { text: "C. understatement", isCorrect: false, rationale: "Nói giảm nói tránh." },
+                            { text: "D. occupation", isCorrect: false, rationale: "Nghề nghiệp." }
+                        ],
+                        evidence: "launched an initiative to foster partnerships",
+                        evidenceTranslation: "khởi xướng một sáng kiến nhằm thúc đẩy hợp tác"
+                    },
+                    {
+                        id: 35,
+                        question: "35. If _____ without proper authorization, the contract may be considered invalid in its entirety.",
+                        questionVietnamese: "Nếu được ký mà không có sự ủy quyền thích hợp, hợp đồng có thể bị coi là không có hiệu lực toàn bộ.",
+                        options: [
+                            { text: "A. signing", isCorrect: false, rationale: "Chủ động." },
+                            { text: "B. signs", isCorrect: false, rationale: "Động từ số ít." },
+                            { text: "C. signed", isCorrect: true, rationale: "Rút gọn mệnh đề điều kiện bị động 'If (it is) signed without...'." },
+                            { text: "D. signature", isCorrect: false, rationale: "Danh từ." }
+                        ],
+                        evidence: "If signed without proper authorization...",
+                        evidenceTranslation: "Nếu được ký mà không có ủy quyền thích hợp..."
+                    },
+                    {
+                        id: 36,
+                        question: "36. The primary duty of the new facilities coordinator is to _____ the store layout to better direct customer flow.",
+                        questionVietnamese: "Nhiệm vụ chính của điều phối viên cơ sở vật chất mới là cải tổ/thay đổi sơ đồ cửa hàng để hướng dẫn luồng khách hàng tốt hơn.",
+                        options: [
+                            { text: "A. enforce", isCorrect: false, rationale: "Thực thi." },
+                            { text: "B. retreat", isCorrect: false, rationale: "Rút lui." },
+                            { text: "C. overhaul", isCorrect: true, rationale: "Động từ 'overhaul' (cải tổ/thay đổi toàn bộ)." },
+                            { text: "D. consolidate", isCorrect: false, rationale: "Củng cố/Gộp lại." }
+                        ],
+                        evidence: "overhaul the store layout to better direct customer flow",
+                        evidenceTranslation: "cải tổ sơ đồ cửa hàng để điều hướng luồng khách tốt hơn"
+                    },
+                    {
+                        id: 37,
+                        question: "37. Vanta Supplies is testing several cost-effective packaging _____ to lower logistics expenses.",
+                        questionVietnamese: "Vanta Supplies đang thử nghiệm một số phương án đóng gói hiệu quả về chi phí để giảm chi phí logistics.",
+                        options: [
+                            { text: "A. deposits", isCorrect: false, rationale: "Khoản tiền cọc." },
+                            { text: "(B) outcomes", isCorrect: false, rationale: "Kết quả." },
+                            { text: "C. functions", isCorrect: false, rationale: "Chức năng." },
+                            { text: "D. alternatives", isCorrect: true, rationale: "Danh từ 'packaging alternatives' (các phương án đóng gói thay thế)." }
+                        ],
+                        evidence: "testing several cost-effective packaging alternatives",
+                        evidenceTranslation: "thử nghiệm các phương án đóng gói thay thế hiệu quả chi phí"
+                    },
+                    {
+                        id: 38,
+                        question: "38. The Medical Research Foundation does not consider grant proposals _____ they are submitted through its official Web site.",
+                        questionVietnamese: "Quỹ Nghiên cứu Y tế không xem xét các đề xuất tài trợ trừ khi chúng được nộp thông qua trang Web chính thức của Quỹ.",
+                        options: [
+                            { text: "A. even", isCorrect: false, rationale: "Ngay cả." },
+                            { text: "B. unless", isCorrect: true, rationale: "Liên từ 'unless' (trừ khi)." },
+                            { text: "C. regardless", isCorrect: false, rationale: "Cần đi với of." },
+                            { text: "D. as though", isCorrect: false, rationale: "Như thể là." }
+                        ],
+                        evidence: "does not consider grant proposals unless they are submitted",
+                        evidenceTranslation: "không xem xét đề xuất trừ khi chúng được nộp qua web"
+                    },
+                    {
+                        id: 39,
+                        question: "39. Before the conclusion of the current quarter, Ms. Sterling will submit a formal proposal regarding the distribution of the _____ surplus funds.",
+                        questionVietnamese: "Trước khi kết thúc quý hiện tại, cô Sterling sẽ nộp một đề xuất chính thức liên quan đến việc phân bổ số tiền thặng dư đã tích lũy.",
+                        options: [
+                            { text: "A. exhausted", isCorrect: false, rationale: "Cạn kiệt." },
+                            { text: "B. appointed", isCorrect: false, rationale: "Được bổ nhiệm." },
+                            { text: "C. reflected", isCorrect: false, rationale: "Được phản ánh." },
+                            { text: "D. accumulated", isCorrect: true, rationale: "Tính từ phân từ 'accumulated surplus funds' (các khoản tiền thặng dư tích lũy được)." }
+                        ],
+                        evidence: "distribution of the accumulated surplus funds",
+                        evidenceTranslation: "phân bổ các khoản tiền thặng dư tích lũy được"
+                    },
+                    {
+                        id: 40,
+                        question: "40. An assortment of _____ labeled samples was transported to Dr. Rye's laboratory for further analysis by her research team.",
+                        questionVietnamese: "Một tập hợp các mẫu thử được dán nhãn rõ ràng đã được vận chuyển đến phòng thí nghiệm của Tiến sĩ Rye để đội nghiên cứu phân tích thêm.",
+                        options: [
+                            { text: "A. clearance", isCorrect: false, rationale: "Danh từ." },
+                            { text: "B. clears", isCorrect: false, rationale: "Động từ số ít." },
+                            { text: "C. clearly", isCorrect: true, rationale: "Trạng từ bổ nghĩa cho tính từ phân từ 'labeled' (clearly labeled = được dán nhãn rõ ràng)." },
+                            { text: "D. clearing", isCorrect: false, rationale: "V-ing." }
+                        ],
+                        evidence: "clearly labeled samples",
+                        evidenceTranslation: "các mẫu thử được dán nhãn rõ ràng"
+                    },
+                    {
+                        id: 41,
+                        question: "41. Altura Manufacturing _____ its raw materials from certified suppliers to ensure consistent quality.",
+                        questionVietnamese: "Altura Manufacturing lấy/thu mua nguyên liệu thô từ các nhà cung cấp được cấp chứng chỉ để đảm bảo chất lượng ổn định.",
+                        options: [
+                            { text: "A. yields", isCorrect: false, rationale: "Mang lại." },
+                            { text: "B. sources", isCorrect: true, rationale: "Động từ 'sources its raw materials' (lấy nguồn nguyên liệu thô)." },
+                            { text: "C. unveils", isCorrect: false, rationale: "Tiết lộ." },
+                            { text: "D. resolves", isCorrect: false, rationale: "Giải quyết." }
+                        ],
+                        evidence: "sources its raw materials from certified suppliers",
+                        evidenceTranslation: "lấy nguồn nguyên liệu thô từ các nhà cung cấp được chứng nhận"
+                    },
+                    {
+                        id: 42,
+                        question: "42. The park renovation will be completed _____ the beginning of next year, in either January or February.",
+                        questionVietnamese: "Việc cải tạo công viên sẽ được hoàn thành vào khoảng/gần đầu năm tới, vào tháng Một hoặc tháng Hai.",
+                        options: [
+                            { text: "A. toward", isCorrect: true, rationale: "Giới từ 'toward the beginning' (vào khoảng/gần thời điểm bắt đầu)." },
+                            { text: "B. until", isCorrect: false, rationale: "Cho tới khi." },
+                            { text: "C. up to", isCorrect: false, rationale: "Cho tới." },
+                            { text: "D. between", isCorrect: false, rationale: "Giữa." }
+                        ],
+                        evidence: "completed toward the beginning of next year",
+                        evidenceTranslation: "hoàn thành vào khoảng đầu năm tới"
+                    },
+                    {
+                        id: 43,
+                        question: "43. The Global Technology Forum attracted numerous computer science _____ looking to stay ahead of industry trends.",
+                        questionVietnamese: "Diễn đàn Công nghệ Toàn cầu đã thu hút đông đảo các chuyên gia khoa học máy tính đang tìm cách dẫn đầu các xu hướng ngành.",
+                        options: [
+                            { text: "A. professionals", isCorrect: true, rationale: "Danh từ số nhiều chỉ người 'computer science professionals' (các chuyên gia khoa học máy tính)." },
+                            { text: "B. discoveries", isCorrect: false, rationale: "Khám phá." },
+                            { text: "C. advancements", isCorrect: false, rationale: "Sự tiến bộ." },
+                            { text: "D. approaches", isCorrect: false, rationale: "Cách tiếp cận." }
+                        ],
+                        evidence: "attracted numerous computer science professionals",
+                        evidenceTranslation: "thu hút đông đảo các chuyên gia khoa học máy tính"
+                    },
+                    {
+                        id: 44,
+                        question: "44. Although business has been slow so far this year, company executives are _____ that sales will rebound during the holiday season.",
+                        questionVietnamese: "Mặc dù tình hình kinh doanh từ đầu năm đến nay khá chậm, các giám đốc điều hành công ty vẫn lạc quan rằng doanh số sẽ hồi phục trong mùa lễ hội.",
+                        options: [
+                            { text: "A. variable", isCorrect: false, rationale: "Biến đổi." },
+                            { text: "B. strategic", isCorrect: false, rationale: "Chiến lược." },
+                            { text: "C. likely", isCorrect: false, rationale: "Có khả năng." },
+                            { text: "D. optimistic", isCorrect: true, rationale: "Tính từ 'optimistic that + mệnh đề' (lạc quan rằng...)." }
+                        ],
+                        evidence: "executives are optimistic that sales will rebound",
+                        evidenceTranslation: "các giám đốc lạc quan rằng doanh số sẽ bật tăng trở lại"
+                    },
+                    {
+                        id: 45,
+                        question: "45. The sophisticated but _____ narrative developed by Mayor Miller's team helped the public understand his urban renewal project.",
+                        questionVietnamese: "Bài thuyết minh tinh tế nhưng vô cùng thuyết phục do đội ngũ của Thị trưởng Miller xây dựng đã giúp công chúng hiểu được dự án chỉnh trang đô thị của ông.",
+                        options: [
+                            { text: "A. compel", isCorrect: false, rationale: "Động từ." },
+                            { text: "B. compelled", isCorrect: false, rationale: "Bị ép buộc." },
+                            { text: "C. compelling", isCorrect: true, rationale: "Tính từ 'compelling narrative' (bài thuyết minh/câu chuyện thuyết phục, hấp dẫn)." },
+                            { text: "D. compels", isCorrect: false, rationale: "Động từ chia số ít." }
+                        ],
+                        evidence: "sophisticated but compelling narrative",
+                        evidenceTranslation: "bài thuyết minh tinh tế nhưng vô cùng thuyết phục"
+                    },
+                    {
+                        id: 46,
+                        question: "46. Interviewers should complete the candidate evaluation forms _____ to avoid influencing each other's assessments.",
+                        questionVietnamese: "Các nhà phỏng vấn nên hoàn thành biểu mẫu đánh giá ứng viên một cách độc lập để tránh làm ảnh hưởng đến đánh giá của nhau.",
+                        options: [
+                            { text: "A. diligently", isCorrect: false, rationale: "Siêng năng." },
+                            { text: "B. favorably", isCorrect: false, rationale: "Thuận lợi." },
+                            { text: "C. mutually", isCorrect: false, rationale: "Lẫn nhau." },
+                            { text: "D. independently", isCorrect: true, rationale: "Trạng từ 'independently' (một cách độc lập)." }
+                        ],
+                        evidence: "complete evaluation forms independently to avoid influencing each other",
+                        evidenceTranslation: "hoàn thành biểu mẫu đánh giá một cách độc lập để tránh ảnh hưởng nhau"
+                    },
+                    {
+                        id: 47,
+                        question: "47. The online portal allows customers to track shipments _____ change delivery addresses for pending orders.",
+                        questionVietnamese: "Cổng thông tin trực tuyến cho phép khách hàng theo dõi lô hàng hoặc thay đổi địa chỉ giao hàng cho các đơn đang chờ xử lý.",
+                        options: [
+                            { text: "A. but", isCorrect: false, rationale: "Nhưng." },
+                            { text: "B. or", isCorrect: true, rationale: "Liên từ 'or' (hoặc)." },
+                            { text: "C. if", isCorrect: false, rationale: "Nếu." },
+                            { text: "D. rather", isCorrect: false, rationale: "Hơn là." }
+                        ],
+                        evidence: "track shipments or change delivery addresses",
+                        evidenceTranslation: "theo dõi lô hàng hoặc thay đổi địa chỉ giao"
+                    },
+                    {
+                        id: 48,
+                        question: "48. Harper Coffee _____ to expand production of its Classic Roast blend even before its recent rise in popularity.",
+                        questionVietnamese: "Harper Coffee đã quyết định mở rộng sản xuất dòng cà phê Classic Roast ngay cả trước khi nó trở nên phổ biến gần đây.",
+                        options: [
+                            { text: "A. has decided", isCorrect: true, rationale: "Thì hiện tại hoàn thành 'has decided'." },
+                            { text: "B. may decide", isCorrect: false, rationale: "Có thể quyết định." },
+                            { text: "C. had decided", isCorrect: false, rationale: "Quá khứ hoàn thành." },
+                            { text: "D. is deciding", isCorrect: false, rationale: "Hiện tại tiếp diễn." }
+                        ],
+                        evidence: "Harper Coffee has decided to expand production...",
+                        evidenceTranslation: "Harper Coffee đã quyết định mở rộng sản xuất..."
+                    },
+                    {
+                        id: 49,
+                        question: "49. It is imperative for all laboratory analysts to _____ deliver accurate measurement results.",
+                        questionVietnamese: "Điều cấp thiết là tất cả phân tích viên phòng thí nghiệm phải liên tục đưa ra các kết quả đo lường chính xác.",
+                        options: [
+                            { text: "A. potentially", isCorrect: false, rationale: "Tiềm năng." },
+                            { text: "B. respectfully", isCorrect: false, rationale: "Tôn trọng." },
+                            { text: "C. uniformly", isCorrect: false, rationale: "Đồng đều." },
+                            { text: "D. consistently", isCorrect: true, rationale: "Trạng từ 'consistently' (nhất quán / liên tục / trước sau như một)." }
+                        ],
+                        evidence: "consistently deliver accurate measurement results",
+                        evidenceTranslation: "liên tục đưa ra kết quả đo lường chính xác"
+                    },
+                    {
+                        id: 50,
+                        question: "50. Aurelia Holdings has maintained a _____ of featuring new hires in its monthly newsletter for over a decade.",
+                        questionVietnamese: "Aurelia Holdings đã duy trì truyền thống giới thiệu nhân viên mới trên bản tin hằng tháng trong hơn một thập kỷ.",
+                        options: [
+                            { text: "A. tradition", isCorrect: true, rationale: "Danh từ 'maintained a tradition' (duy trì truyền thống)." },
+                            { text: "B. decision", isCorrect: false, rationale: "Quyết định." },
+                            { text: "C. calendar", isCorrect: false, rationale: "Lịch." },
+                            { text: "D. measure", isCorrect: false, rationale: "Biện pháp." }
+                        ],
+                        evidence: "maintained a tradition of featuring new hires",
+                        evidenceTranslation: "duy trì truyền thống giới thiệu nhân viên mới"
+                    }
+                ]
+            },
+            "t2": {
+                title: "100 CÂU HỎI PART 5 THEO XU HƯỚNG MỚI (TEST 02)",
+                quizData: [
+                    {
+                        id: 101,
+                        question: "Question 1. Construction of the new airport terminal has been halted yet again, and officials say this stoppage may extend _____ October.",
+                        questionVietnamese: "Việc xây dựng nhà ga sân bay mới đã bị hoãn lại một lần nữa, và các quan chức nói rằng sự đình trệ này có thể kéo dài sang tận tháng Mười.",
+                        options: [
+                            { text: "A. above", isCorrect: false, rationale: "Phía trên." },
+                            { text: "B. during", isCorrect: false, rationale: "Trong suốt." },
+                            { text: "C. into", isCorrect: true, rationale: "Giới từ 'extend into + thời gian' (kéo dài sang/đến tận thời điểm nào)." },
+                            { text: "D. around", isCorrect: false, rationale: "Xung quanh." }
+                        ],
+                        evidence: "stoppage may extend into October",
+                        evidenceTranslation: "sự đình trệ có thể kéo dài sang tận tháng Mười"
+                    },
+                    {
+                        id: 102,
+                        question: "Question 2. The introduction of motion-sensor lighting throughout Alveron Mall has made its overall energy consumption more _____.",
+                        questionVietnamese: "Việc đưa vào sử dụng hệ thống đèn cảm biến chuyển động tại Alveron Mall đã làm cho tổng mức tiêu thụ năng lượng của nó hiệu quả hơn.",
+                        options: [
+                            { text: "A. efficient", isCorrect: true, rationale: "Tính từ 'efficient' trong cấu trúc 'make sth + Adj'." },
+                            { text: "B. efficiency", isCorrect: false, rationale: "Danh từ." },
+                            { text: "C. efficiently", isCorrect: false, rationale: "Trạng từ." },
+                            { text: "D. efficiencies", isCorrect: false, rationale: "Danh từ số nhiều." }
+                        ],
+                        evidence: "made its overall energy consumption more efficient",
+                        evidenceTranslation: "làm cho tổng mức tiêu thụ năng lượng hiệu quả hơn"
+                    },
+                    {
+                        id: 103,
+                        question: "Question 3. As outlined in the staff handbook, all kitchen surfaces must be _____ after each shift by the designated personnel.",
+                        questionVietnamese: "Như được phác thảo trong sổ tay nhân viên, tất cả các bề mặt nhà bếp phải được khử trùng sau mỗi ca làm việc bởi nhân sự được phân công.",
+                        options: [
+                            { text: "A. aligned", isCorrect: false, rationale: "Căn chỉnh." },
+                            { text: "B. labeled", isCorrect: false, rationale: "Dán nhãn." },
+                            { text: "C. reserved", isCorrect: false, rationale: "Đặt trước." },
+                            { text: "D. sanitized", isCorrect: true, rationale: "Động từ phân từ bị động 'sanitized' (được khử trùng/vệ sinh sạch sẽ)." }
+                        ],
+                        evidence: "surfaces must be sanitized after each shift",
+                        evidenceTranslation: "các bề mặt phải được khử trùng sau mỗi ca"
+                    },
+                    {
+                        id: 104,
+                        question: "Question 4. _____ training platforms enable multilocation companies to provide standardized training to all of their staff.",
+                        questionVietnamese: "Các nền tảng đào tạo từ xa cho phép các công ty có nhiều chi nhánh cung cấp đào tạo chuẩn hóa cho tất cả nhân viên của họ.",
+                        options: [
+                            { text: "A. Remote", isCorrect: true, rationale: "Tính từ 'Remote training platforms' (các nền tảng đào tạo từ xa)." },
+                            { text: "B. Remotely", isCorrect: false, rationale: "Trạng từ." },
+                            { text: "C. Remotes", isCorrect: false, rationale: "Danh từ số nhiều." },
+                            { text: "D. Remoteness", isCorrect: false, rationale: "Danh từ sự xa xôi." }
+                        ],
+                        evidence: "Remote training platforms enable...",
+                        evidenceTranslation: "Các nền tảng đào tạo từ xa cho phép..."
+                    },
+                    {
+                        id: 105,
+                        question: "Question 5. In the first part of the onboarding process, the supervisor will cover the code of ethical conduct and _____ will be required of the interns.",
+                        questionVietnamese: "Trong phần đầu của quy trình hội nhập, người giám sát sẽ phổ biến bộ quy tắc ứng xử đạo đức và những gì sẽ được yêu cầu ở các thực tập sinh.",
+                        options: [
+                            { text: "A. who", isCorrect: false, rationale: "Ai." },
+                            { text: "B. what", isCorrect: true, rationale: "Mệnh đề danh từ 'what will be required' (những gì sẽ được yêu cầu)." },
+                            { text: "C. this", isCorrect: false, rationale: "Cái này." },
+                            { text: "D. anything", isCorrect: false, rationale: "Bất kỳ cái gì." }
+                        ],
+                        evidence: "cover the code... and what will be required of the interns",
+                        evidenceTranslation: "phổ biến quy tắc... và những gì sẽ được yêu cầu ở thực tập sinh"
+                    },
+                    {
+                        id: 106,
+                        question: "Question 6. Mr. Harrington _____ recognized the acclaimed actor and requested an autograph.",
+                        questionVietnamese: "Ông Harrington đã nhận ra ngay lập tức nam diễn viên nổi tiếng và xin chữ ký.",
+                        options: [
+                            { text: "A. precisely", isCorrect: false, rationale: "Chính xác." },
+                            { text: "B. meticulously", isCorrect: false, rationale: "Tỉ mỉ." },
+                            { text: "C. eventfully", isCorrect: false, rationale: "Sôi động." },
+                            { text: "D. instantly", isCorrect: true, rationale: "Trạng từ 'instantly' (ngay lập tức)." }
+                        ],
+                        evidence: "instantly recognized the acclaimed actor",
+                        evidenceTranslation: "nhận ra ngay lập tức diễn viên nổi tiếng"
+                    },
+                    {
+                        id: 107,
+                        question: "Question 7. If the design team _____ the prototype in time for the trade expo, advance orders could be collected on site.",
+                        questionVietnamese: "Nếu đội ngũ thiết kế hoàn thành mẫu thử kịp thời cho buổi triển lãm thương mại, các đơn đặt hàng trước có thể được thu thập ngay tại chỗ.",
+                        options: [
+                            { text: "A. completed", isCorrect: true, rationale: "Câu điều kiện loại 2 (If + S + V_past_simple, S + could + V_bare)." },
+                            { text: "B. was completing", isCorrect: false, rationale: "Quá khứ tiếp diễn." },
+                            { text: "C. to be completing", isCorrect: false, rationale: "To-be V-ing." },
+                            { text: "D. has been completed", isCorrect: false, rationale: "Hiện tại hoàn thành bị động." }
+                        ],
+                        evidence: "If the design team completed... advance orders could be collected",
+                        evidenceTranslation: "Nếu đội thiết kế hoàn thành... đơn hàng có thể được thu thập"
+                    },
+                    {
+                        id: 108,
+                        question: "Question 8. The _____ outlook shared by industry analysts following the company's annual briefing led to a decline in its stock price.",
+                        questionVietnamese: "Triển vọng thận trọng do các chuyên gia phân tích ngành chia sẻ sau buổi họp báo hằng năm của công ty đã dẫn đến sự sụt giảm giá cổ phiếu.",
+                        options: [
+                            { text: "A. disappointed", isCorrect: false, rationale: "Bị thất vọng." },
+                            { text: "B. absent", isCorrect: false, rationale: "Vắng mặt." },
+                            { text: "C. various", isCorrect: false, rationale: "Đa dạng." },
+                            { text: "D. cautious", isCorrect: true, rationale: "Tính từ 'cautious outlook' (triển vọng thận trọng)." }
+                        ],
+                        evidence: "The cautious outlook shared by industry analysts...",
+                        evidenceTranslation: "Triển vọng thận trọng do các chuyên gia phân tích chia sẻ..."
+                    },
+                    {
+                        id: 109,
+                        question: "Question 9. _____ exploring ancient ruins or Renaissance galleries, visitors to Rome are sure to gain an appreciation for its rich cultural heritage.",
+                        questionVietnamese: "Cho dù là khám phá các di tích cổ xưa hay các phòng trưng bày thời Phục hưng, du khách đến Rome chắc chắn sẽ thêm trân trọng di sản văn hóa phong phú của nơi đây.",
+                        options: [
+                            { text: "A. Whether", isCorrect: true, rationale: "Cấu trúc 'Whether A or B' (Cho dù là A hay B)." },
+                            { text: "B. Since", isCorrect: false, rationale: "Bởi vì." },
+                            { text: "C. Either", isCorrect: false, rationale: "Either A or B (chọn 1 trong 2, mâu thuẫn ngữ nghĩa)." },
+                            { text: "D. Meanwhile", isCorrect: false, rationale: "Trong khi đó." }
+                        ],
+                        evidence: "Whether exploring ancient ruins or Renaissance galleries...",
+                        evidenceTranslation: "Cho dù là khám phá di tích cổ hay phòng trưng bày..."
+                    },
+                    {
+                        id: 110,
+                        question: "Question 10. The expansion of its legal division will make Nichols Industries less _____ on external consultants.",
+                        questionVietnamese: "Việc mở rộng bộ phận pháp lý sẽ làm cho Nichols Industries ít phụ thuộc hơn vào các cố vấn bên ngoài.",
+                        options: [
+                            { text: "A. dependable", isCorrect: false, rationale: "Có thể tin cậy." },
+                            { text: "B. dependent", isCorrect: true, rationale: "Tính từ 'dependent on' (phụ thuộc vào)." },
+                            { text: "C. dependence", isCorrect: false, rationale: "Danh từ." },
+                            { text: "D. dependently", isCorrect: false, rationale: "Trạng từ." }
+                        ],
+                        evidence: "make Nichols Industries less dependent on external consultants",
+                        evidenceTranslation: "làm cho Nichols bớt phụ thuộc vào các cố vấn bên ngoài"
+                    },
+                    {
+                        id: 111,
+                        question: "Question 11. Erecting barriers along Olson River is just one of several _____ Lakehurst Township has taken to minimize flooding risks.",
+                        questionVietnamese: "Việc dựng các rào chắn dọc theo Sông Olson chỉ là một trong số vài biện pháp mà Thị trấn Lakehurst đã thực hiện để giảm thiểu rủi ro ngập lụt.",
+                        options: [
+                            { text: "A. measures", isCorrect: true, rationale: "Danh từ 'measures' trong cụm 'take measures' (thực hiện các biện pháp)." },
+                            { text: "B. compliments", isCorrect: false, rationale: "Lời khen." },
+                            { text: "C. predictions", isCorrect: false, rationale: "Dự đoán." },
+                            { text: "D. objectives", isCorrect: false, rationale: "Mục tiêu." }
+                        ],
+                        evidence: "one of several measures Lakehurst Township has taken",
+                        evidenceTranslation: "một trong số vài biện pháp thị trấn đã thực hiện"
+                    },
+                    {
+                        id: 112,
+                        question: "Question 12. The ticket counter at the ferry terminal is temporarily out of service _____ the payment equipment is being upgraded.",
+                        questionVietnamese: "Quầy bán vé tại bến phà tạm thời ngừng hoạt động bởi vì/trong khi thiết bị thanh toán đang được nâng cấp.",
+                        options: [
+                            { text: "A. as", isCorrect: true, rationale: "Liên từ 'as' (bởi vì / trong khi)." },
+                            { text: "B. until", isCorrect: false, rationale: "Cho tới khi." },
+                            { text: "C. so that", isCorrect: false, rationale: "Để mà." },
+                            { text: "D. unless", isCorrect: false, rationale: "Trừ khi." }
+                        ],
+                        evidence: "out of service as the payment equipment is being upgraded",
+                        evidenceTranslation: "ngừng hoạt động bởi vì thiết bị thanh toán đang nâng cấp"
+                    },
+                    {
+                        id: 113,
+                        question: "Question 13. After a series of financial restructuring efforts, Corliss Enterprises is accustomed to _____ operating costs.",
+                        questionVietnamese: "Sau một chuỗi các nỗ lực tái cơ cấu tài chính, Corliss Enterprises đã quen với việc giới hạn chi phí vận hành.",
+                        options: [
+                            { text: "A. limit", isCorrect: false, rationale: "V_bare." },
+                            { text: "B. limiting", isCorrect: true, rationale: "Cấu trúc 'be accustomed to + V-ing' (quen với việc làm gì)." },
+                            { text: "C. limits", isCorrect: false, rationale: "Động từ số ít." },
+                            { text: "D. limitation", isCorrect: false, rationale: "Danh từ." }
+                        ],
+                        evidence: "accustomed to limiting operating costs",
+                        evidenceTranslation: "quen với việc giới hạn chi phí vận hành"
+                    },
+                    {
+                        id: 114,
+                        question: "Question 14. Mr. Silva _____ that several streetlights were out and reported the issue to the city's Department of Public Works.",
+                        questionVietnamese: "Ông Silva nhận thấy rằng một số đèn đường đã bị hỏng và đã báo cáo vấn đề này cho Sở Công chính thành phố.",
+                        options: [
+                            { text: "A. defined", isCorrect: false, rationale: "Định nghĩa." },
+                            { text: "B. noticed", isCorrect: true, rationale: "Động từ 'noticed' (nhận ra/chú ý thấy)." },
+                            { text: "C. predicted", isCorrect: false, rationale: "Dự đoán." },
+                            { text: "D. monitored", isCorrect: false, rationale: "Giám sát." }
+                        ],
+                        evidence: "Mr. Silva noticed that several streetlights were out",
+                        evidenceTranslation: "Ông Silva nhận thấy rằng một số đèn đường bị hỏng"
+                    },
+                    {
+                        id: 115,
+                        question: "Question 15. _____ the growing volume of administrative requests, management will be implementing a simplified documentation process.",
+                        questionVietnamese: "Xét đến khối lượng yêu cầu hành chính ngày càng tăng, ban quản lý sẽ triển khai một quy trình hồ sơ đơn giản hóa.",
+                        options: [
+                            { text: "A. According to", isCorrect: false, rationale: "Theo như." },
+                            { text: "B. In contrast to", isCorrect: false, rationale: "Trái ngược với." },
+                            { text: "C. On top of", isCorrect: false, rationale: "Bên cạnh/Thêm vào." },
+                            { text: "D. In light of", isCorrect: true, rationale: "Cụm giới từ 'In light of + N' (Xét đến / Vì lý do)." }
+                        ],
+                        evidence: "In light of the growing volume of administrative requests...",
+                        evidenceTranslation: "Xét đến khối lượng yêu cầu hành chính ngày càng tăng..."
+                    },
+                    {
+                        id: 116,
+                        question: "Question 16. Thanks to a last-minute system update, Trivanta Networks _____ avoided a major data breach.",
+                        questionVietnamese: "Nhờ vào bản cập nhật hệ thống phút chót, Trivanta Networks đã suýt soát né tránh được một vụ rò rỉ dữ liệu lớn.",
+                        options: [
+                            { text: "A. narrow", isCorrect: false, rationale: "Tính từ." },
+                            { text: "B. narrowly", isCorrect: true, rationale: "Trạng từ 'narrowly avoided' (suýt soát né tránh/trong gang tấc)." },
+                            { text: "C. narrowing", isCorrect: false, rationale: "V-ing." },
+                            { text: "D. narrowed", isCorrect: false, rationale: "V-ed." }
+                        ],
+                        evidence: "narrowly avoided a major data breach",
+                        evidenceTranslation: "suýt soát né tránh được vụ rò rỉ dữ liệu lớn"
+                    },
+                    {
+                        id: 117,
+                        question: "Question 17. The _____ of vibrant colors can add visual interest to an otherwise dull painting.",
+                        questionVietnamese: "Việc đưa vào các màu sắc rực rỡ có thể tạo thêm sự lôi cuốn về mặt thị giác cho một bức tranh vốn ảm đạm.",
+                        options: [
+                            { text: "A. inclusion", isCorrect: true, rationale: "Danh từ 'inclusion' (sự đưa vào/thêm vào)." },
+                            { text: "B. appreciation", isCorrect: false, rationale: "Sự trân trọng." },
+                            { text: "C. restoration", isCorrect: false, rationale: "Sự phục hồi." },
+                            { text: "D. sketching", isCorrect: false, rationale: "Việc phác họa." }
+                        ],
+                        evidence: "The inclusion of vibrant colors can add...",
+                        evidenceTranslation: "Việc đưa vào các màu sắc rực rỡ có thể tạo thêm..."
+                    },
+                    {
+                        id: 118,
+                        question: "Question 18. The _____ of the highway overpass to accommodate heavier vehicles has been halted due to budget constraints.",
+                        questionVietnamese: "Việc gia cố cầu vượt đường cao tốc để chịu tải các xe nặng hơn đã bị tạm dừng do hạn chế ngân sách.",
+                        options: [
+                            { text: "A. strength", isCorrect: false, rationale: "Sức mạnh." },
+                            { text: "B. strongest", isCorrect: false, rationale: "Mạnh nhất." },
+                            { text: "C. strengthen", isCorrect: false, rationale: "Động từ." },
+                            { text: "D. strengthening", isCorrect: true, rationale: "Danh động từ/Danh từ 'strengthening' (việc gia cố/làm mạnh thêm)." }
+                        ],
+                        evidence: "The strengthening of the highway overpass...",
+                        evidenceTranslation: "Việc gia cố cầu vượt đường cao tốc..."
+                    },
+                    {
+                        id: 119,
+                        question: "Question 19. Ms. Bennett was _____ critical of the plan to outsource our intellectual property protection services.",
+                        questionVietnamese: "Cô Bennett đã chỉ trích gay gắt kế hoạch thuê ngoài các dịch vụ bảo vệ sở hữu trí tuệ của chúng tôi.",
+                        options: [
+                            { text: "A. sharply", isCorrect: true, rationale: "Trạng từ 'sharply critical' (chỉ trích gay gắt/sắc bén)." },
+                            { text: "B. sharply", isCorrect: false, rationale: "Trùng đáp án." },
+                            { text: "C. steeply", isCorrect: false, rationale: "Dốc đứng." },
+                            { text: "D. patiently", isCorrect: false, rationale: "Kiên nhẫn." }
+                        ],
+                        evidence: "was sharply critical of the plan",
+                        evidenceTranslation: "đã chỉ trích gay gắt kế hoạch"
+                    },
+                    {
+                        id: 20,
+                        question: "Question 20. The grant organization will continue to fund the research _____ a detailed progress report is submitted each semester.",
+                        questionVietnamese: "Tổ chức tài trợ sẽ tiếp tục cấp vốn cho nghiên cứu miễn là một báo cáo tiến độ chi tiết được nộp mỗi học kỳ.",
+                        options: [
+                            { text: "A. in case", isCorrect: false, rationale: "Phòng khi." },
+                            { text: "B. as though", isCorrect: false, rationale: "Như thể là." },
+                            { text: "C. in order that", isCorrect: false, rationale: "Để mà." },
+                            { text: "D. as long as", isCorrect: true, rationale: "Liên từ 'as long as' (miễn là/với điều kiện là)." }
+                        ],
+                        evidence: "continue to fund... as long as a detailed progress report is submitted",
+                        evidenceTranslation: "tiếp tục cấp vốn... miễn là báo cáo tiến độ được nộp"
+                    },
+                    {
+                        id: 21,
+                        question: "Question 21. All data storage systems _____ as backup servers at Gateway Data Center are regularly serviced.",
+                        questionVietnamese: "Tất cả các hệ thống lưu trữ dữ liệu hoạt động như các máy chủ dự phòng tại Trung tâm Dữ liệu Gateway đều được bảo trì thường xuyên.",
+                        options: [
+                            { text: "A. function", isCorrect: false, rationale: "Động từ nguyên mẫu." },
+                            { text: "B. functioned", isCorrect: false, rationale: "V-ed." },
+                            { text: "C. functions", isCorrect: false, rationale: "Động từ số ít." },
+                            { text: "D. functioning", isCorrect: true, rationale: "Mệnh đề quan hệ rút gọn chủ động 'functioning as...'." }
+                        ],
+                        evidence: "systems functioning as backup servers...",
+                        evidenceTranslation: "các hệ thống hoạt động như máy chủ dự phòng..."
+                    },
+                    {
+                        id: 22,
+                        question: "Question 22. Expanding into luxury yacht charters has _____ to be a lucrative move for Prestige Harbor Travel.",
+                        questionVietnamese: "Việc mở rộng sang mảng cho thuê du thuyền hạng sang đã chứng tỏ là một bước đi mang lại nhiều lợi nhuận cho Prestige Harbor Travel.",
+                        options: [
+                            { text: "A. strived", isCorrect: false, rationale: "Cố gắng." },
+                            { text: "B. proven", isCorrect: true, rationale: "Cấu trúc 'proven to be...' (đã chứng tỏ/chứng minh là)." },
+                            { text: "C. enabled", isCorrect: false, rationale: "Cho phép." },
+                            { text: "D. considered", isCorrect: false, rationale: "Cân nhắc." }
+                        ],
+                        evidence: "has proven to be a lucrative move",
+                        evidenceTranslation: "đã chứng tỏ là một bước đi sinh lời"
+                    },
+                    {
+                        id: 23,
+                        question: "Question 23. The sudden withdrawal of the investor was the most _____ incident Ms. Sato had encountered in her role as CFO.",
+                        questionVietnamese: "Sự rút vốn đột ngột của nhà đầu tư là sự cố phức tạp/khó hiểu nhất mà cô Sato từng gặp phải ở vai trò Giám đốc Tài chính.",
+                        options: [
+                            { text: "A. conscious", isCorrect: false, rationale: "Tỉnh táo/Ý thức." },
+                            { text: "B. imaginary", isCorrect: false, rationale: "Tưởng tượng." },
+                            { text: "C. perplexing", isCorrect: true, rationale: "Tính từ 'perplexing incident' (sự cố gây rắc rối/khó hiểu/phức tạp)." },
+                            { text: "D. cautious", isCorrect: false, rationale: "Thận trọng." }
+                        ],
+                        evidence: "most perplexing incident Ms. Sato had encountered",
+                        evidenceTranslation: "sự cố rắc rối/phức tạp nhất mà cô Sato gặp phải"
+                    },
+                    {
+                        id: 24,
+                        question: "Question 24. Kelmax Interiors can design workspaces in _____ layout and configuration may be preferred.",
+                        questionVietnamese: "Kelmax Interiors có thể thiết kế không gian làm việc theo bất kỳ bố cục và cấu hình nào được yêu thích.",
+                        options: [
+                            { text: "A. any", isCorrect: false, rationale: "Bất kỳ." },
+                            { text: "B. specific", isCorrect: false, rationale: "Cụ thể." },
+                            { text: "C. which", isCorrect: false, rationale: "Cái nào." },
+                            { text: "D. whatever", isCorrect: true, rationale: "Từ hạn định 'whatever + N' (bất kỳ sơ đồ/cấu hình nào)." }
+                        ],
+                        evidence: "in whatever layout and configuration may be preferred",
+                        evidenceTranslation: "theo bất kỳ bố cục và cấu hình nào được ưu tiên"
+                    },
+                    {
+                        id: 25,
+                        question: "Question 25. Human Resources systematically tracks the progress of each _____ of interns from their first day until the end of their training.",
+                        questionVietnamese: "Phòng Nhân sự theo dõi một cách hệ thống tiến độ của từng nhóm/khóa thực tập sinh từ ngày đầu tiên cho đến khi kết thúc khóa đào tạo.",
+                        options: [
+                            { text: "A. staffing", isCorrect: false, rationale: "Sự tuyển dụng." },
+                            { text: "B. participant", isCorrect: false, rationale: "Người tham gia." },
+                            { text: "C. cohort", isCorrect: true, rationale: "Danh từ 'cohort of interns' (nhóm/khóa/đội ngũ thực tập sinh cùng lứa)." },
+                            { text: "D. interval", isCorrect: false, rationale: "Khoảng thời gian." }
+                        ],
+                        evidence: "each cohort of interns from their first day...",
+                        evidenceTranslation: "từng khóa/nhóm thực tập sinh từ ngày đầu của họ..."
+                    },
+                    {
+                        id: 26,
+                        question: "Question 26. Photographs submitted after the contest deadline will not be considered, _____ will they be returned to the senders.",
+                        questionVietnamese: "Các bức ảnh được nộp sau hạn chót cuộc thi sẽ không được xem xét, và chúng cũng sẽ không được trả lại cho người gửi.",
+                        options: [
+                            { text: "A. neither", isCorrect: false, rationale: "Đi với nor/không đứng vế này." },
+                            { text: "B. except", isCorrect: false, rationale: "Ngoại trừ." },
+                            { text: "C. but", isCorrect: false, rationale: "Nhưng." },
+                            { text: "D. nor", isCorrect: true, rationale: "Liên từ 'nor + trợ động từ + S' (và cũng không...)." }
+                        ],
+                        evidence: "will not be considered, nor will they be returned",
+                        evidenceTranslation: "sẽ không được xem xét, và chúng cũng sẽ không được trả lại"
+                    },
+                    {
+                        id: 27,
+                        question: "Question 27. The customer loyalty program provides shoppers with a strong _____ to make repeat purchases.",
+                        questionVietnamese: "Chương trình khách hàng thân thiết mang lại cho người mua hàng động lực mạnh mẽ để tiếp tục mua sắm lại.",
+                        options: [
+                            { text: "A. commission", isCorrect: false, rationale: "Tiền hoa hồng." },
+                            { text: "B. satisfaction", isCorrect: false, rationale: "Sự hài lòng." },
+                            { text: "C. incentive", isCorrect: true, rationale: "Danh từ 'incentive to do sth' (động lực/sự khuyến khích làm gì)." },
+                            { text: "D. support", isCorrect: false, rationale: "Sự hỗ trợ." }
+                        ],
+                        evidence: "provides shoppers with a strong incentive to make repeat purchases",
+                        evidenceTranslation: "mang lại cho người mua động lực mạnh mẽ để mua lại"
+                    },
+                    {
+                        id: 28,
+                        question: "Question 28. The new inter-city express train accelerates so _____ that many passengers cannot feel the motion.",
+                        questionVietnamese: "Tàu tốc hành liên tỉnh mới gia tốc mượt mà đến mức nhiều hành khách không thể cảm nhận được sự chuyển động.",
+                        options: [
+                            { text: "A. smooth", isCorrect: false, rationale: "Tính từ." },
+                            { text: "B. smoother", isCorrect: false, rationale: "So sánh hơn." },
+                            { text: "C. smoothly", isCorrect: true, rationale: "Trạng từ bổ nghĩa cho động từ 'accelerates'." },
+                            { text: "D. smoothness", isCorrect: false, rationale: "Danh từ." }
+                        ],
+                        evidence: "accelerates so smoothly that...",
+                        evidenceTranslation: "gia tốc trơn tru/mượt mà đến mức..."
+                    },
+                    {
+                        id: 29,
+                        question: "Question 29. _____ distribution centers benefit from reduced transportation costs due to their proximity to major shipping ports.",
+                        questionVietnamese: "Các trung tâm phân phối ven biển được hưởng lợi từ việc giảm chi phí vận chuyển nhờ nằm gần các cảng biển lớn.",
+                        options: [
+                            { text: "A. Permanent", isCorrect: false, rationale: "Vĩnh viễn." },
+                            { text: "B. Certified", isCorrect: false, rationale: "Được chứng nhận." },
+                            { text: "C. Coastal", isCorrect: true, rationale: "Tính từ 'Coastal distribution centers' (các trung tâm phân phối ven biển)." },
+                            { text: "D. Urban", isCorrect: false, rationale: "Đô thị." }
+                        ],
+                        evidence: "Coastal distribution centers benefit from...",
+                        evidenceTranslation: "Các trung tâm phân phối ven biển hưởng lợi từ..."
+                    },
+                    {
+                        id: 30,
+                        question: "Question 30. The projected revenue figures for our new subsidiary in its first fiscal year came _____ five percent of being accurate.",
+                        questionVietnamese: "Con số doanh thu dự kiến cho chi nhánh mới của chúng tôi trong năm tài chính đầu tiên đã nằm trong khoảng lệch 5% so với độ chính xác.",
+                        options: [
+                            { text: "A. within", isCorrect: true, rationale: "Giới từ 'within + khoản' (trong phạm vi lệch 5%)." },
+                            { text: "B. after", isCorrect: false, rationale: "Sau." },
+                            { text: "C. from", isCorrect: false, rationale: "Từ." },
+                            { text: "D. out of", isCorrect: false, rationale: "Ra khỏi." }
+                        ],
+                        evidence: "came within five percent of being accurate",
+                        evidenceTranslation: "nằm trong khoảng lệch 5% so với mức chính xác"
+                    },
+                    {
+                        id: 31,
+                        question: "Question 31. Customer service representatives are instructed to remain professional, _____ demanding the customers may be.",
+                        questionVietnamese: "Các đại diện dịch vụ khách hàng được hướng dẫn phải giữ sự chuyên nghiệp, cho dù khách hàng có đòi hỏi khắt khe đến mức nào.",
+                        options: [
+                            { text: "A. more", isCorrect: false, rationale: "Nhiều hơn." },
+                            { text: "B. however", isCorrect: true, rationale: "Cấu trúc 'however + Adj + S + V' (cho dù... đến mức nào đi nữa)." },
+                            { text: "C. regardless", isCorrect: false, rationale: "Cần đi với of." },
+                            { text: "D. although", isCorrect: false, rationale: "Mặc dù (không đi với tính từ đứng liền kề)." }
+                        ],
+                        evidence: "remain professional, however demanding the customers may be",
+                        evidenceTranslation: "giữ chuyên nghiệp, cho dù khách hàng đòi hỏi thế nào"
+                    },
+                    {
+                        id: 32,
+                        question: "Question 32. Astra Aviation's Frontier 898 was rated the most _____ among the midsize aircraft evaluated.",
+                        questionVietnamese: "Frontier 898 của Astra Aviation được đánh giá là đáng tin cậy nhất trong số các máy bay tầm trung được đánh giá.",
+                        options: [
+                            { text: "A. relies", isCorrect: false, rationale: "Động từ số ít." },
+                            { text: "B. reliable", isCorrect: true, rationale: "Tính từ 'the most reliable' (đáng tin cậy nhất)." },
+                            { text: "C. reliably", isCorrect: false, rationale: "Trạng từ." },
+                            { text: "D. reliability", isCorrect: false, rationale: "Danh từ." }
+                        ],
+                        evidence: "rated the most reliable among...",
+                        evidenceTranslation: "được đánh giá đáng tin cậy nhất trong số..."
+                    },
+                    {
+                        id: 33,
+                        question: "Question 33. Created to generate as much _____ as possible, Mega Tech's latest promotional campaign targets a broad online audience.",
+                        questionVietnamese: "Được tạo ra để tạo ra càng nhiều sự tiếp cận/quảng bá càng tốt, chiến dịch khuyến mãi mới nhất của Mega Tech hướng tới lượng lớn khán giả trực tuyến.",
+                        options: [
+                            { text: "A. exposure", isCorrect: true, rationale: "Danh từ không đếm được 'exposure' (sự quảng bá/tiếp cận truyền thông)." },
+                            { text: "B. reception", isCorrect: false, rationale: "Sự đón nhận." },
+                            { text: "C. flexibility", isCorrect: false, rationale: "Sự linh hoạt." },
+                            { text: "D. mileage", isCorrect: false, rationale: "Dặm đường." }
+                        ],
+                        evidence: "generate as much exposure as possible",
+                        evidenceTranslation: "tạo ra càng nhiều sự tiếp cận/quảng bá càng tốt"
+                    },
+                    {
+                        id: 34,
+                        question: "Question 34. Despite vigorous marketing efforts, quarterly sales were _____ below expectations due to a shift in consumer preferences.",
+                        questionVietnamese: "Mặc dù có những nỗ lực tiếp thị mạnh mẽ, doanh số hằng quý vẫn hơi/một chút thấp hơn kỳ vọng do sự thay đổi trong sở thích của người tiêu dùng.",
+                        options: [
+                            { text: "A. ever", isCorrect: false, rationale: "Từng." },
+                            { text: "B. somewhat", isCorrect: true, rationale: "Trạng từ 'somewhat' (hơi/một chút)." },
+                            { text: "C. moreover", isCorrect: false, rationale: "Hơn nữa." },
+                            { text: "D. too", isCorrect: false, rationale: "Phải đi với to-V." }
+                        ],
+                        evidence: "sales were somewhat below expectations",
+                        evidenceTranslation: "doanh số hơi thấp hơn so với kỳ vọng"
+                    },
+                    {
+                        id: 35,
+                        question: "Question 35. The study analyzes the long-term _____ of automation on entry-level job opportunities in the manufacturing sector.",
+                        questionVietnamese: "Nghiên cứu phân tích tác động dài hạn của tự động hóa đối với các cơ hội việc làm cấp cơ sở trong ngành sản xuất.",
+                        options: [
+                            { text: "A. performance", isCorrect: false, rationale: "Hiệu suất." },
+                            { text: "B. impact", isCorrect: true, rationale: "Danh từ 'impact of A on B' (tác động của A lên B)." },
+                            { text: "C. scope", isCorrect: false, rationale: "Phạm vi." },
+                            { text: "D. potential", isCorrect: false, rationale: "Tiềm năng." }
+                        ],
+                        evidence: "analyzes the long-term impact of automation on...",
+                        evidenceTranslation: "phân tích tác động dài hạn của tự động hóa lên..."
+                    },
+                    {
+                        id: 36,
+                        question: "Question 36. The design team is meeting this week to _____ how additional green spaces can be incorporated into the Harbor Point project.",
+                        questionVietnamese: "Đội ngũ thiết kế đang họp vào tuần này để xác định làm thế nào các không gian xanh bổ sung có thể được đưa vào dự án Harbor Point.",
+                        options: [
+                            { text: "A. broaden", isCorrect: false, rationale: "Mở rộng." },
+                            { text: "B. experiment", isCorrect: false, rationale: "Thử nghiệm." },
+                            { text: "C. determine", isCorrect: true, rationale: "Động từ 'determine how...' (xác định/quyết định xem làm thế nào)." },
+                            { text: "D. measure", isCorrect: false, rationale: "Đo lường." }
+                        ],
+                        evidence: "meeting this week to determine how additional green spaces...",
+                        evidenceTranslation: "họp tuần này để xác định xem không gian xanh..."
+                    },
+                    {
+                        id: 37,
+                        question: "37. The factory closure is _____ the first of several downsizing measures that our textile firm must take to stay profitable.",
+                        questionVietnamese: "Việc đóng cửa nhà máy đáng tiếc là biện pháp đầu tiên trong số vài biện pháp thu hẹp quy mô mà công ty dệt may của chúng ta phải thực hiện để duy trì lợi nhuận.",
+                        options: [
+                            { text: "A. regret", isCorrect: false, rationale: "Động từ." },
+                            { text: "B. regretted", isCorrect: false, rationale: "V-ed." },
+                            { text: "C. regrettable", isCorrect: false, rationale: "Tính từ." },
+                            { text: "D. regrettably", isCorrect: true, rationale: "Trạng từ 'regrettably' (đáng tiếc là)." }
+                        ],
+                        evidence: "closure is regrettably the first of several downsizing measures",
+                        evidenceTranslation: "việc đóng cửa đáng tiếc là biện pháp đầu tiên..."
+                    },
+                    {
+                        id: 38,
+                        question: "Question 38. Vista Bank installed partition panels between its transaction counters to minimize teller _____ and improve service.",
+                        questionVietnamese: "Ngân hàng Vista đã lắp đặt các vách ngăn giữa các quầy giao dịch để giảm thiểu sự xao nhãng của giao dịch viên và cải thiện dịch vụ.",
+                        options: [
+                            { text: "A. adjustments", isCorrect: false, rationale: "Sự điều chỉnh." },
+                            { text: "B. insurance", isCorrect: false, rationale: "Bảo hiểm." },
+                            { text: "C. distractions", isCorrect: true, rationale: "Danh từ 'distractions' (sự xao nhãng/mất tập trung)." },
+                            { text: "D. assistance", isCorrect: false, rationale: "Sự hỗ trợ." }
+                        ],
+                        evidence: "minimize teller distractions and improve service",
+                        evidenceTranslation: "giảm thiểu sự xao nhãng của giao dịch viên"
+                    },
+                    {
+                        id: 39,
+                        question: "Question 39. The public is more likely to support community programs when _____ clear information about their benefits.",
+                        questionVietnamese: "Công chúng có nhiều khả năng hỗ trợ các chương trình cộng đồng hơn khi được cung cấp thông tin rõ ràng về lợi ích của chúng.",
+                        options: [
+                            { text: "A. offer", isCorrect: false, rationale: "Chủ động nguyên mẫu." },
+                            { text: "B. offered", isCorrect: true, rationale: "Mệnh đề rút gọn dạng bị động 'when (they are) offered'." },
+                            { text: "C. offering", isCorrect: false, rationale: "Chủ động." },
+                            { text: "D. offers", isCorrect: false, rationale: "Động từ số ít." }
+                        ],
+                        evidence: "when offered clear information about their benefits",
+                        evidenceTranslation: "khi được cung cấp thông tin rõ ràng về lợi ích"
+                    },
+                    {
+                        id: 40,
+                        question: "Question 40. _____ extended port closures are expected due to adverse weather, we should adjust our inventory targets.",
+                        questionVietnamese: "Xét đến việc việc đóng cửa cảng kéo dài dự kiến sẽ xảy ra do thời tiết bất lợi, chúng ta nên điều chỉnh các mục tiêu tồn kho của mình.",
+                        options: [
+                            { text: "A. Rather than", isCorrect: false, rationale: "Thay vì." },
+                            { text: "B. After all", isCorrect: false, rationale: "Rốt cuộc." },
+                            { text: "C. In order that", isCorrect: false, rationale: "Để mà." },
+                            { text: "D. Given that", isCorrect: true, rationale: "Liên từ 'Given that + mệnh đề' (Xét đến việc / Bởi vì)." }
+                        ],
+                        evidence: "Given that extended port closures are expected...",
+                        evidenceTranslation: "Xét đến việc cảng đóng cửa kéo dài dự kiến sẽ xảy ra..."
+                    },
+                    {
+                        id: 41,
+                        question: "Question 41. The Horton Group's acquisition of a machinery manufacturer is projected to _____ substantial cost savings for the automotive giant.",
+                        questionVietnamese: "Việc Tập đoàn Horton mua lại một nhà sản xuất máy móc được dự báo sẽ mang lại khoản tiết kiệm chi phí đáng kể cho gã khổng lồ ngành ô tô.",
+                        options: [
+                            { text: "A. yield", isCorrect: true, rationale: "Động từ 'yield cost savings' (mang lại/sinh ra khoản tiết kiệm chi phí)." },
+                            { text: "B. reflect", isCorrect: false, rationale: "Phản ánh." },
+                            { text: "C. unveil", isCorrect: false, rationale: "Tiết lộ." },
+                            { text: "D. resolve", isCorrect: false, rationale: "Giải quyết." }
+                        ],
+                        evidence: "projected to yield substantial cost savings",
+                        evidenceTranslation: "được dự báo sẽ mang lại khoản tiết kiệm chi phí đáng kể"
+                    },
+                    {
+                        id: 42,
+                        question: "Question 42. With simplified controls and a budget-friendly price, the Amax Lite wireless headphones are an ideal option for _____ listeners.",
+                        questionVietnamese: "Với bộ điều khiển đơn giản và mức giá thân thiện với ngân sách, tai nghe không dây Amax Lite là lựa chọn lý tưởng cho những người nghe thông thường.",
+                        options: [
+                            { text: "A. casual", isCorrect: true, rationale: "Tính từ 'casual listeners' (những người nghe nhạc thông thường/không chuyên)." },
+                            { text: "B. practiced", isCorrect: false, rationale: "Thành thạo." },
+                            { text: "C. independent", isCorrect: false, rationale: "Độc lập." },
+                            { text: "D. selective", isCorrect: false, rationale: "Có chọn lọc." }
+                        ],
+                        evidence: "ideal option for casual listeners",
+                        evidenceTranslation: "lựa chọn lý tưởng cho người nghe thông thường"
+                    },
+                    {
+                        id: 43,
+                        question: "Question 43. A thorough data review was carried out to verify that _____ unsatisfactory occurred during pre-launch testing.",
+                        questionVietnamese: "Một cuộc rà soát dữ liệu kỹ lưỡng đã được thực hiện để xác minh rằng không có điều gì không thỏa đáng xảy ra trong quá trình thử nghiệm trước khi ra mắt.",
+                        options: [
+                            { text: "A. none", isCorrect: false, rationale: "Đại từ chỉ số lượng." },
+                            { text: "B. no", isCorrect: false, rationale: "Từ hạn định (cần danh từ phía sau)." },
+                            { text: "C. not", isCorrect: false, rationale: "Phó từ." },
+                            { text: "D. nothing", isCorrect: true, rationale: "Đại từ bất định 'nothing + Adj' (không có điều gì không thỏa đáng)." }
+                        ],
+                        evidence: "verify that nothing unsatisfactory occurred",
+                        evidenceTranslation: "xác minh không có điều gì không thỏa đáng xảy ra"
+                    },
+                    {
+                        id: 44,
+                        question: "Question 44. Fusion Systems has been _____ the highest industry honor for its innovatively designed new product line.",
+                        questionVietnamese: "Fusion Systems đã được trao danh hiệu cao nhất trong ngành cho dòng sản phẩm mới được thiết kế đổi mới sáng tạo của mình.",
+                        options: [
+                            { text: "A. promoted", isCorrect: false, rationale: "Được thăng chức/Khuyến mãi." },
+                            { text: "B. awarded", isCorrect: true, rationale: "Dạng bị động 'has been awarded + N' (được trao thưởng/danh hiệu)." },
+                            { text: "C. credited", isCorrect: false, rationale: "Được công nhận." },
+                            { text: "D. endorsed", isCorrect: false, rationale: "Được xác nhận." }
+                        ],
+                        evidence: "has been awarded the highest industry honor",
+                        evidenceTranslation: "đã được trao danh hiệu cao nhất trong ngành"
+                    },
+                    {
+                        id: 45,
+                        question: "Question 45. The first fifty shoppers at Greenleaf Market _____ the customer feedback form will receive a reusable shopping bag.",
+                        questionVietnamese: "Năm mươi người mua hàng đầu tiên tại Chợ Greenleaf hoàn thành biểu mẫu phản hồi khách hàng sẽ nhận được một túi mua sắm tái sử dụng.",
+                        options: [
+                            { text: "A. complete", isCorrect: false, rationale: "Động từ nguyên mẫu." },
+                            { text: "B. are completing", isCorrect: false, rationale: "Hiện tại tiếp diễn." },
+                            { text: "C. to complete", isCorrect: true, rationale: "Rút gọn mệnh đề quan hệ sau 'The first + N' dùng 'to-V' (to complete)." },
+                            { text: "D. completed", isCorrect: false, rationale: "V-ed." }
+                        ],
+                        evidence: "The first fifty shoppers... to complete the customer feedback form",
+                        evidenceTranslation: "50 người mua hàng đầu tiên hoàn thành biểu mẫu"
+                    },
+                    {
+                        id: 46,
+                        question: "Question 46. The marketing team is having its newly designed brochures _____ in preparation for the upcoming event.",
+                        questionVietnamese: "Đội ngũ tiếp thị đang nhờ/cho in các tờ rơi mới thiết kế để chuẩn bị cho sự kiện sắp tới.",
+                        options: [
+                            { text: "A. prints", isCorrect: false, rationale: "Động từ số ít." },
+                            { text: "B. printing", isCorrect: false, rationale: "V-ing." },
+                            { text: "C. to print", isCorrect: false, rationale: "To-V." },
+                            { text: "D. printed", isCorrect: true, rationale: "Cấu trúc truyền khiến bị động 'have sth + Vp2' (have brochures printed)." }
+                        ],
+                        evidence: "having its newly designed brochures printed",
+                        evidenceTranslation: "cho in các tờ rơi mới thiết kế"
+                    },
+                    {
+                        id: 47,
+                        question: "Question 47. Two bids have been submitted for the new contract, _____ of which meet our budget requirements.",
+                        questionVietnamese: "Hai hồ sơ dự thầu đã được nộp cho hợp đồng mới, không có hồ sơ nào trong số đó đáp ứng các yêu cầu ngân sách của chúng tôi.",
+                        options: [
+                            { text: "A. every", isCorrect: false, rationale: "Không đi với 'of'." },
+                            { text: "B. most", isCorrect: false, rationale: "Dùng cho từ 3 trở lên." },
+                            { text: "C. nothing", isCorrect: false, rationale: "Không dùng cho 2 đối tượng." },
+                            { text: "D. neither", isCorrect: true, rationale: "Cấu trúc 'neither of which' (không cái nào trong số hai cái)." }
+                        ],
+                        evidence: "Two bids... neither of which meet our budget requirements",
+                        evidenceTranslation: "Hai hồ sơ dự thầu... không cái nào đáp ứng ngân sách"
+                    },
+                    {
+                        id: 48,
+                        question: "Question 48. Representatives from Caldwell Industries are attending trade exhibitions to attract _____ for their new product line.",
+                        questionVietnamese: "Các đại diện từ Caldwell Industries đang tham dự các triển lãm thương mại để thu hút sự chú ý của công chúng/truyền thông cho dòng sản phẩm mới của họ.",
+                        options: [
+                            { text: "A. publicize", isCorrect: false, rationale: "Động từ." },
+                            { text: "B. publicly", isCorrect: false, rationale: "Trạng từ." },
+                            { text: "C. publicity", isCorrect: true, rationale: "Danh từ 'attract publicity' (thu hút sự chú ý/truyền thông)." },
+                            { text: "D. public", isCorrect: false, rationale: "Tính từ." }
+                        ],
+                        evidence: "attending trade exhibitions to attract publicity",
+                        evidenceTranslation: "tham dự triển lãm thương mại để thu hút truyền thông"
+                    },
+                    {
+                        id: 49,
+                        question: "Question 49. The annual bonus pool was _____ distributed among employees based on performance evaluations and years of service.",
+                        questionVietnamese: "Quỹ thưởng hằng năm đã được phân phối một cách công bằng giữa các nhân viên dựa trên đánh giá hiệu suất và số năm công tác.",
+                        options: [
+                            { text: "A. potentially", isCorrect: false, rationale: "Tiềm năng." },
+                            { text: "B. respectfully", isCorrect: false, rationale: "Tôn trọng." },
+                            { text: "C. uniformly", isCorrect: false, rationale: "Đồng đều." },
+                            { text: "D. equitably", isCorrect: true, rationale: "Trạng từ 'equitably' (một cách công bằng/bình đẳng)." }
+                        ],
+                        evidence: "bonus pool was equitably distributed among employees",
+                        evidenceTranslation: "quỹ thưởng được chia công bằng giữa các nhân viên"
+                    },
+                    {
+                        id: 50,
+                        question: "Question 50. Aurelia Holdings has maintained a _____ of featuring new hires in its monthly newsletter for over a decade.",
+                        questionVietnamese: "Aurelia Holdings đã duy trì truyền thống giới thiệu nhân viên mới trong bản tin hằng tháng của mình trong hơn một thập kỷ.",
+                        options: [
+                            { text: "A. tradition", isCorrect: true, rationale: "Cụm danh từ 'maintained a tradition' (duy trì một truyền thống)." },
+                            { text: "B. decision", isCorrect: false, rationale: "Quyết định." },
+                            { text: "C. calendar", isCorrect: false, rationale: "Lịch." },
+                            { text: "D. measure", isCorrect: false, rationale: "Biện pháp." }
+                        ],
+                        evidence: "maintained a tradition of featuring new hires",
+                        evidenceTranslation: "duy trì truyền thống giới thiệu nhân viên mới"
+                    }
+                ]
+            }
+        };
+
+        function App() {
+            const [selectedTestId, setSelectedTestId] = useState("t1");
+            const [userAnswers, setUserAnswers] = useState({});
+            const [submitted, setSubmitted] = useState(false);
+            const [score, setScore] = useState(0);
+
+            const currentTest = testsDatabase[selectedTestId] || testsDatabase["t1"];
+            const quizData = currentTest.quizData || [];
+
+            const handleTestChange = (e) => {
+                setSelectedTestId(e.target.value);
+                setUserAnswers({});
+                setSubmitted(false);
+                setScore(0);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            };
+
+            const handleSelect = (qId, optionIndex) => {
+                if (submitted) return;
+                setUserAnswers({ ...userAnswers, [qId]: optionIndex });
+            };
+
+            const handleSubmit = () => {
+                let currentScore = 0;
+                quizData.forEach(q => {
+                    if (q.options && q.options[userAnswers[q.id]]?.isCorrect) {
+                        currentScore++;
+                    }
+                });
+                setScore(currentScore);
+                setSubmitted(true);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            };
+
+            const handleReset = () => {
+                setUserAnswers({});
+                setSubmitted(false);
+                setScore(0);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            };
+
+            const scrollToQuestion = (qId) => {
+                const el = document.getElementById(`q-${qId}`);
+                if (el) {
+                    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            };
+
+            const answeredCount = Object.keys(userAnswers).length;
+            const allAnswered = quizData.length > 0 && answeredCount === quizData.length;
+
+            return (
+                <div className="max-w-5xl mx-auto px-4 py-8 relative">
+                    {/* Top Selector Bar */}
+                    <div className="bg-slate-900 text-white p-4 rounded-2xl mb-8 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-md">
+                        <div className="flex items-center gap-2">
+                            <span className="text-xl">📝</span>
+                            <span className="font-bold text-base md:text-lg">TOEIC Part 5 Practice App</span>
+                        </div>
+                        <div className="flex items-center gap-3">
+                            <label htmlFor="test-select" className="text-xs md:text-sm font-semibold text-slate-300">
+                                Chọn Đề Thi:
+                            </label>
+                            <select 
+                                id="test-select"
+                                value={selectedTestId}
+                                onChange={handleTestChange}
+                                className="bg-slate-800 text-amber-300 font-bold px-4 py-2 rounded-xl border border-slate-700 text-sm focus:outline-none focus:ring-2 focus:ring-amber-400"
+                            >
+                                <option value="t1">Test 01 (50 câu: Q1 - Q50)</option>
+                                <option value="t2">Test 02 (50 câu: Q1 - Q50)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    {/* Header */}
+                    <header className="text-center mb-8 bg-white p-6 rounded-2xl shadow-sm border border-slate-200">
+                        <span className="bg-blue-100 text-blue-700 font-bold px-4 py-1.5 rounded-full text-xs uppercase tracking-wider">
+                            TOEIC 700 - 850+ (2026)
+                        </span>
+                        <h1 className="text-2xl md:text-3xl font-bold text-slate-800 mt-3 mb-1">
+                            {currentTest.title}
+                        </h1>
+                        <p className="text-slate-500 text-sm font-semibold italic">
+                            by Dirius
+                        </p>
+
+                        {submitted && (
+                            <div className="mt-6 p-6 bg-emerald-50 rounded-xl border border-emerald-200 text-center animate-fade-in">
+                                <h2 className="text-2xl font-bold text-emerald-800">
+                                    Kết quả bài làm: {score} / {quizData.length} câu
+                                </h2>
+                                <p className="text-emerald-600 text-sm mt-1 mb-4">
+                                    {score === quizData.length ? '🎉 Tuyệt vời! Bạn đã hoàn thành chính xác 100%!' : 'Bạn hãy xem chi tiết đáp án và lời giải ở phía dưới nhé.'}
+                                </p>
+                                <button 
+                                    onClick={handleReset}
+                                    className="bg-emerald-600 hover:bg-emerald-700 text-white font-semibold px-6 py-2.5 rounded-lg shadow transition-all duration-200"
+                                >
+                                    🔄 Làm lại bài test
+                                </button>
+                            </div>
+                        )}
+                    </header>
+
+                    {/* Main Content Layout */}
+                    <div className="flex flex-col lg:flex-row gap-8">
+                        {/* Questions Column */}
+                        <div className="flex-1 space-y-6">
+                            {quizData.map((q, idx) => (
+                                <div 
+                                    id={`q-${q.id}`} 
+                                    key={q.id}
+                                    className={`p-6 rounded-2xl border transition-all bg-white shadow-sm scroll-mt-20 ${
+                                        submitted 
+                                            ? (q.options[userAnswers[q.id]]?.isCorrect ? 'border-emerald-300 bg-emerald-50/10' : 'border-rose-300 bg-rose-50/10') 
+                                            : 'border-slate-200 hover:border-slate-300'
+                                    }`}
+                                >
+                                    <div className="flex items-start gap-3 mb-4">
+                                        <span className="bg-slate-800 text-white font-bold text-xs px-2.5 py-1 rounded-md shrink-0 mt-0.5">
+                                            Câu {idx + 1}
+                                        </span>
+                                        <h3 className="text-base font-bold text-slate-800 leading-relaxed">
+                                            {q.question}
+                                        </h3>
+                                    </div>
+
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
+                                        {q.options.map((option, oIdx) => {
+                                            let style = "border-slate-200 hover:border-blue-300 text-slate-700 bg-white";
+                                            const isSelected = userAnswers[q.id] === oIdx;
+
+                                            if (submitted) {
+                                                if (option.isCorrect) {
+                                                    style = "border-emerald-500 bg-emerald-100/60 text-emerald-900 font-semibold";
+                                                } else if (isSelected) {
+                                                    style = "border-rose-500 bg-rose-100/60 text-rose-900 font-semibold";
+                                                } else {
+                                                    style = "border-slate-100 text-slate-400 opacity-60 bg-white";
+                                                }
+                                            } else if (isSelected) {
+                                                style = "border-blue-600 bg-blue-50 text-blue-900 font-semibold";
+                                            }
+
+                                            return (
+                                                <button
+                                                    key={oIdx}
+                                                    onClick={() => handleSelect(q.id, oIdx)}
+                                                    disabled={submitted}
+                                                    className={`option-card text-left p-3.5 border-2 rounded-xl text-sm flex items-start gap-2.5 ${style}`}
+                                                >
+                                                    <span>{option.text}</span>
+                                                </button>
+                                            );
+                                        })}
+                                    </div>
+
+                                    {submitted && (
+                                        <div className="mt-5 p-5 bg-emerald-50/60 rounded-xl border border-emerald-300 text-sm space-y-3 font-sans">
+                                            <div className="space-y-1 text-slate-800 font-medium">
+                                                <p className="font-bold text-emerald-950 mb-1.5">
+                                                    🌐 Dịch câu: {q.questionVietnamese}
+                                                </p>
+                                                {q.options.map((opt, oIdx) => (
+                                                    <p key={oIdx} className={opt.isCorrect ? "font-bold text-emerald-800" : "text-slate-600"}>
+                                                        {opt.text.substring(0, 3)} {opt.rationale}
+                                                    </p>
+                                                ))}
+                                            </div>
+
+                                            <hr className="border-emerald-200" />
+
+                                            <div className="text-slate-800 leading-relaxed space-y-1.5">
+                                                <p>
+                                                    <span className="font-semibold text-emerald-900">Manh mối / Cụm từ:</span> "{q.evidence}" – "{q.evidenceTranslation}"
+                                                </p>
+                                                <p className="font-bold text-emerald-700 text-base pt-1">
+                                                    ➔ Chọn {String.fromCharCode(65 + q.options.findIndex(o => o.isCorrect))}
+                                                </p>
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
+                            ))}
+                        </div>
+
+                        {/* Sidebar Right */}
+                        <div className="w-full lg:w-72 shrink-0">
+                            <div className="sticky top-6 bg-white p-5 rounded-2xl shadow-sm border border-slate-200 space-y-4">
+                                <div>
+                                    <h3 className="font-bold text-slate-800 text-base mb-3 flex items-center justify-between">
+                                        <span>Danh sách câu hỏi</span>
+                                        <span className="text-xs bg-slate-100 text-slate-600 px-2.5 py-1 rounded-full">
+                                            {answeredCount}/{quizData.length}
+                                        </span>
+                                    </h3>
+
+                                    <div className="grid grid-cols-4 gap-2">
+                                        {quizData.map((q, idx) => {
+                                            const isAnswered = userAnswers[q.id] !== undefined;
+                                            const selectedOpt = userAnswers[q.id];
+                                            const isCorrect = submitted && isAnswered && q.options[selectedOpt]?.isCorrect;
+
+                                            let btnStatusClass = "";
+
+                                            if (!submitted) {
+                                                if (isAnswered) {
+                                                    btnStatusClass = "bg-emerald-600 text-white font-bold border-emerald-600 shadow-sm";
+                                                } else {
+                                                    btnStatusClass = "bg-slate-800 text-white font-medium border-slate-800 hover:bg-slate-700";
+                                                }
+                                            } else {
+                                                if (isCorrect) {
+                                                    btnStatusClass = "bg-emerald-500 text-white font-bold ring-2 ring-emerald-300";
+                                                } else {
+                                                    btnStatusClass = "bg-rose-500 text-white font-bold ring-2 ring-rose-300";
+                                                }
+                                            }
+
+                                            return (
+                                                <button
+                                                    key={q.id}
+                                                    onClick={() => scrollToQuestion(q.id)}
+                                                    className={`w-11 h-11 rounded-full border flex flex-col items-center justify-center text-xs transition-all transform hover:scale-105 active:scale-95 ${btnStatusClass}`}
+                                                    title={`Trỏ đến câu ${idx + 1}`}
+                                                >
+                                                    <span>{idx + 1}</span>
+                                                    {!submitted && isAnswered && (
+                                                        <span className="text-[10px] leading-none">✓</span>
+                                                    )}
+                                                    {submitted && (
+                                                        <span className="text-[10px] leading-none">
+                                                            {isCorrect ? '✓' : '✕'}
+                                                        </span>
+                                                    )}
+                                                </button>
+                                            );
+                                        })}
+                                    </div>
+                                </div>
+
+                                <div className="pt-2 border-t border-slate-100 space-y-2 text-xs text-slate-600">
+                                    {!submitted ? (
+                                        <>
+                                            <div className="flex items-center gap-2">
+                                                <span className="w-3.5 h-3.5 rounded-full bg-slate-800 inline-block"></span>
+                                                <span>Chưa làm</span>
+                                            </div>
+                                            <div className="flex items-center gap-2">
+                                                <span className="w-3.5 h-3.5 rounded-full bg-emerald-600 inline-block text-white text-[9px] text-center leading-3">✓</span>
+                                                <span>Đã chọn</span>
+                                            </div>
+                                        </>
+                                    ) : (
+                                        <>
+                                            <div className="flex items-center gap-2">
+                                                <span className="w-3.5 h-3.5 rounded-full bg-emerald-500 inline-block text-white text-[9px] text-center leading-3">✓</span>
+                                                <span>Câu đúng</span>
+                                            </div>
+                                            <div className="flex items-center gap-2">
+                                                <span className="w-3.5 h-3.5 rounded-full bg-rose-500 inline-block text-white text-[9px] text-center leading-3">✕</span>
+                                                <span>Câu sai</span>
+                                            </div>
+                                        </>
+                                    )}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Bottom Submit Bar */}
+                    <div className="sticky bottom-6 mt-10 flex justify-center">
+                        {!submitted ? (
+                            allAnswered ? (
+                                <button
+                                    onClick={handleSubmit}
+                                    className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3.5 px-10 rounded-full shadow-xl transition-all transform hover:scale-105 active:scale-95"
+                                >
+                                    NỘP BÀI VÀ XEM ĐÁP ÁN
+                                </button>
+                            ) : (
+                                <div className="bg-amber-100 border border-amber-300 text-amber-900 font-medium px-6 py-3 rounded-full shadow-md text-sm">
+                                    Đã hoàn thành {answeredCount} / {quizData.length} câu (Hãy chọn đủ {quizData.length} câu để hiện nút Nộp bài)
+                                </div>
+                            )
+                        ) : (
+                            <button
+                                onClick={handleReset}
+                                className="bg-slate-800 hover:bg-slate-900 text-white font-bold py-3.5 px-10 rounded-full shadow-xl transition-all transform hover:scale-105 active:scale-95"
+                            >
+                                🔄 LÀM LẠI BÀI TEST
+                            </button>
+                        )}
+                    </div>
+                </div>
+            );
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+</html>
